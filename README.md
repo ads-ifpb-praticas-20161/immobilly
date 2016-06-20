@@ -21,23 +21,34 @@ Data          |   Versão    |               Descrição                  |  Aut
 ------------- | ----------- | ---------------------------------------- | --------------------------------
 
 1. [CONSIDERAÇÕES INICIAIS](#user-content-coninicial)
+    1.1 [Descrição](#user-content-d)
+    1.2 [O sistema Immobilly](#user-content-ost)
+    1.3 [Objetivo](#user-content-o)
 2. [REQUISITOS](#user-content-requisito)
-    * 2.1 [Autenticação no sistema](#user-content-atenticacao)
+    2.1 [Autenticação no sistema](#user-content-as)
+    2.2 [Manter usuários](#user-content-mu)
+    2.3 [Manter veículos](#user-content-mv)
+    2.4 [Manter fornecedor](#user-content-mf)
+    2.5 [Manter locação de veículo](#user-content-mlv)
+    2.6 [Manter manutenção de veículo](#user-content-mmv)
+    2.7 [Manter abastecimento do veículo](#user-content-mav)
+    2.8 [Manter licenciamento dos veículos](#user-content-mldv)
+3. [MANUAL DE IMPLANTAÇÃO DO SISTEMA](#user-content-mis)
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Analise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
 
-## 1.1 Descrição
+## 1.1 <a name="d">Descrição</a>
 A NetLineTelecom - não possui modelo ou ferramenta para o adequado gerenciamento dos veículos da sua frota. Não existe um adequado controle das revisões dos veículos, assim como a definição por meio de ferramentas confiáveis que descrevam quais dos funcionários, se encontro em posse de dado automóvel, como também não se tem controle das atividades corriqueiras a serem desenvolvidas, tomando como base suas características, se manutenção em instalações, se vistorias de rede, entre outras., e o uso das ferramentas adequadas para cada atividade, deste modo direcionar os veículos que melhor se adeque a está atividade.  Pensando assim os funcionários responsáveis por realizar a administração dos veículos disporão de um modulo no sistema em que serão capazes de descrever atividades características para cada automóvel (se disponíveis e/ou ocupados, realizar consultas e realizar a locação de veículo), além de um modulo administrativo para gerenciar processos necessários ao sistema como cadastro de funcionários, de motoristas, sendo os mesmo com suas adequadas permissões de acessos personalizadas conforme cada perfil ao qual pertence. Ainda como característica do sistema no mesmo será possível realizar a supervisão/acompanhamento dos recursos e dos veículos  permitidos o a liberação ou bloqueio dos mesmos para uso tendo em vista está em processo de revisão, manutenção, entre outras. 
 
-## 1.2 O sistema Immobilly
+## 1.2 <a name="ost">O sistema Immobilly</a>
 O sistema será independente necessitando de certa forma apenas de acesso à internet e por meio de browser se autenticar e ter conhecimento conforme a permissão para uso das ferramentas adequadas a resolução de suas atividades.
 O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negócios a sua interface gráfica, em outras palavras, por meio do uso de sua estrutura de negócio será capaz de elabora uma nova interface gráfica sem a devida necessidade de altera o código do modelo de negócio. Deste modo para isso o sistema seguirá o padrão MVC, dividindo-o em três camadas: apresentação/visão, modelo e controle.
 
 ![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png][MVC]
  
 [MVC]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png
-## 1.3 Objetivo
+## 1.3 <a name="o">Objetivo</a>
 Este documento tem por objetivo principal apontar os requisitos do sistema de gerenciamento de veículos da empresa NetLineTelecom, fornecendo ao desenvolvimento do projeto as orientações necessárias para a adequada implementação do sistema.
 
 # 2 <a name="requisito">REQUISITOS</a>
@@ -47,7 +58,7 @@ Nesta seção descreveremos os requisitos levantados para a implementação do s
 
 [Diagrama de caso de uso]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/UseCase%20Diagram0.jpg?raw=true
 
-## 2.1 <a name="auteticacao">Autenticação no sistema</a>
+## 2.1 <a name="as">Autenticação no sistema</a>
 Tal caso de uso permitirá aos usuários em cada especificidade se autenticarem no sistema e desta forma será apresentado as funcionalidades disponíveis para cada usuário conforme o papel.
 
 ### Atores envolvidos
@@ -74,7 +85,7 @@ Passo     |                    Descrição
 1.        |    Inicia-se o fluxo se o usuário entra com dados incorretos de usuário e senha no sistema.
 2.        |  O sistema informará que os dados estão incorretos nome de usuário ou senha.
 
-## 2.2 Manter usuários
+## 2.2 <a name="mu">Manter usuários</a>
 Tal caso de uso possibilitará ao administrador e o supervisor gerenciar os usuários de variados papéis além de promover funcionalidade para inserir, alterar, consultar e excluir os mesmos. 
 
 ### Atores envolvidos
@@ -131,7 +142,7 @@ Passo      |                    Descrição
 3.         | O sistema exibi uma lista de usuários correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
 
-## 2.3 Manter veículos
+## 2.3 <a name="mv">Manter veículos</a>
 Tal caso de uso possibilitará ao administrador e o supervisor gerenciar os veículos da frota além de promover funcionalidade para inserir, alterar, consultar e excluir os mesmos. 
 
 ### Atores envolvidos
@@ -189,7 +200,7 @@ Passo      |                    Descrição
 4.         | O caso de uso é encerrado.
 
 
-## 2.4 Manter fornecedor
+## 2.4 <a name="mf">Manter fornecedor</a>
 Tal caso de uso possibilitará ao administrador e o supervisor gerenciar os fornecedores de recursos a serem usados nas atividades com os veículos além de promover funcionalidade para inserir, alterar, consultar e excluir os fornecedores. 
 
 ### Atores envolvidos
@@ -247,7 +258,7 @@ Passo      |                    Descrição
 4.         | O caso de uso é encerrado.
 
 
-## 2.5 Manter locação de veículo
+## 2.5 <a name="mlv">Manter locação de veículo</a>
 Tal caso de uso possibilitará ao colaborador alocar um veículo para a realização das atividades a serem desenvolvidas em dado tempo além de promover funcionalidade para inserir, alterar, consultar e excluir suas alocações. 
 
 ### Atores envolvidos
@@ -305,7 +316,7 @@ Passo      |                    Descrição
 4.         | O caso de uso é encerrado.
 
 
-## 2.6 Manter manutenção de veículo
+## 2.6 <a name="mmv">Manter manutenção de veículo</a>
 Tal caso de uso possibilitará ao supervisor gerenciar as manutenções dos veículos da frota da empresa além de promover funcionalidade para inserir, alterar, consultar e excluir as devidas manutenções. 
 
 ### Atores envolvidos
@@ -375,7 +386,7 @@ Passo      |                    Descrição
 3.         | O sistema exibi uma lista de manutenção de veículo correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
 
-## 2.7 Manter abastecimento do veículo
+## 2.7 <a name="mav">Manter abastecimento do veículo</a>
 Tal caso de uso possibilitará ao supervisor gerenciar os abastecimentos dos veículos da frota da empresa além de promover funcionalidade para inserir, alterar, consultar e excluir os devidos abastecimentos. 
 
 ### Atores envolvidos
@@ -434,7 +445,7 @@ Passo      |                    Descrição
 3.         | O sistema exibi uma lista de abastecimento do veículo correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
 
-## 2.8 Manter licenciamento dos veículos
+## 2.8 <a name="mldv">Manter licenciamento dos veículos</a>
 Tal caso de uso possibilitará ao supervisor gerenciar os licenciamento dos veículos da frota da empresa além de promover funcionalidade para inserir, alterar, consultar e excluir os devidos licenciamento dos veículos. 
 
 ### Atores envolvidos
@@ -496,4 +507,4 @@ Passo      |                    Descrição
 
 
 
-# 3 MANUAL DE IMPLANTAÇÃO DO SISTEMA
+# <a name="mis">3 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
