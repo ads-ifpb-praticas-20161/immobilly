@@ -27,7 +27,7 @@ A NetLineTelecom - não possui modelo ou ferramenta para o adequado gerenciament
 O sistema será independente necessitando de certa forma apenas de acesso à internet e por meio de browser se autenticar e ter conhecimento conforme a permissão para uso das ferramentas adequadas a resolução de suas atividades.
 O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negócios a sua interface gráfica, em outras palavras, por meio do uso de sua estrutura de negócio será capaz de elabora uma nova interface gráfica sem a devida necessidade de altera o código do modelo de negócio. Deste modo para isso o sistema seguirá o padrão MVC, dividindo-o em três camadas: apresentação/visão, modelo e controle.
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png][MVC]
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png?raw=true][MVC]
  
 
 ## 1.3 Objetivo
@@ -36,7 +36,7 @@ Este documento tem por objetivo principal apontar os requisitos do sistema de ge
 # 2 REQUISITOS
 Nesta seção descreveremos os requisitos levantados para a implementação do sistema de gerenciamento de veículos da NetLineTelecom.  Deste modo o levantemnto de requisitos fará-se explicado por meio de caso de uso para melhor ilustrar as funcionalidades e atores do sistema. 
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/UseCase%20Diagram0.jpg][Diagrama de caso de uso]
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/UseCase%20Diagram0.jpg?raw=true][Diagrama de caso de uso]
 
 
 ## 2.1 Autenticação no sistema
