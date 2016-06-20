@@ -45,4 +45,163 @@ public class Colaborador implements Serializable {
     private Reserva reserva;
     @OneToMany(mappedBy = "colaborador", cascade = CascadeType.ALL)
     private Licenciamento licenciamento;
+
+    public Colaborador() {
+    }
+
+    public Colaborador(long cod, String nome, String email, String senha, String celular, Date dataNascimento, String sexo, String CPF, String cargo, Endereço endereco, CNH cnh, Locacao locacao, Reserva reserva, Licenciamento licenciamento) {
+        this.cod = cod;
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.celular = celular;
+        this.dataNascimento = dataNascimento;
+        this.sexo = sexo;
+        this.CPF = CPF;
+        this.cargo = cargo;
+        this.endereco = endereco;
+        this.cnh = cnh;
+        this.locacao = locacao;
+        this.reserva = reserva;
+        this.licenciamento = licenciamento;
+    }
+
+    public long getCod() {
+        return cod;
+    }
+
+    public void setCod(long cod) {
+        this.cod = cod;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public Endereço getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereço endereco) {
+        this.endereco = endereco;
+    }
+
+    public CNH getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(CNH cnh) {
+        this.cnh = cnh;
+    }
+
+    public Locacao getLocacao() {
+        return locacao;
+    }
+
+    public void setLocacao(Locacao locacao) {
+        this.locacao = locacao;
+    }
+
+    public Reserva getReserva() {
+        return reserva;
+    }
+
+    public void setReserva(Reserva reserva) {
+        this.reserva = reserva;
+    }
+
+    public Licenciamento getLicenciamento() {
+        return licenciamento;
+    }
+
+    public void setLicenciamento(Licenciamento licenciamento) {
+        this.licenciamento = licenciamento;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 53 * hash + (int) (this.cod ^ (this.cod >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Colaborador other = (Colaborador) obj;
+        if (this.cod != other.cod) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }
