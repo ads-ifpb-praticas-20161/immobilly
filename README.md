@@ -15,9 +15,16 @@ Versão      |       Alteração               |  Data
 #### Histórico de revisão
 Data          |   Versão    |               Descrição                  |  Autor(es)
 ------------- | ----------- | ---------------------------------------- | --------------------------------
-21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | Jéderson / Aluísio
+21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) / [Jéderson](https://github.com/jedersongm) 
 
-# 1 CONSIDERAÇÕES INICIAIS
+
+------------- | ----------- | ---------------------------------------- | --------------------------------
+
+1. [CONSIDERAÇÕES INICIAIS](#user-content-coninicial)
+2. [REQUISITOS](#user-content-requisito)
+    * 2.1 [Autenticação no sistema](#user-content-atenticacao)
+
+# 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Analise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
 
 ## 1.1 Descrição
@@ -33,14 +40,14 @@ O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negó
 ## 1.3 Objetivo
 Este documento tem por objetivo principal apontar os requisitos do sistema de gerenciamento de veículos da empresa NetLineTelecom, fornecendo ao desenvolvimento do projeto as orientações necessárias para a adequada implementação do sistema.
 
-# 2 REQUISITOS
-Nesta seção descreveremos os requisitos levantados para a implementação do sistema de gerenciamento de veículos da NetLineTelecom.  Deste modo o levantemnto de requisitos fará-se explicado por meio de caso de uso para melhor ilustrar as funcionalidades e atores do sistema. 
+# 2 <a name="requisito">REQUISITOS</a>
+Nesta seção descreveremos os requisitos levantados para a implementação do sistema de gerenciamento de veículos da NetLineTelecom.  Deste modo o levantemnto de requisitos fará-se explicado por meio de caso de uso para melhor ilustrar as funcionalidades e atores do sistema, conforme diagram de caso de uso seguinte. 
 
 ![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/UseCase%20Diagram0.jpg?raw=true][Diagrama de caso de uso]
 
 [Diagrama de caso de uso]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/UseCase%20Diagram0.jpg?raw=true
 
-## 2.1 Autenticação no sistema
+## 2.1 <a name="auteticacao">Autenticação no sistema</a>
 Tal caso de uso permitirá aos usuários em cada especificidade se autenticarem no sistema e desta forma será apresentado as funcionalidades disponíveis para cada usuário conforme o papel.
 
 ### Atores envolvidos
@@ -485,5 +492,8 @@ Passo      |                    Descrição
 2.         | O supervisor digita o texto desejado para a realização da busca do licenciamento.
 3.         | O sistema exibi uma lista de licenciamento do veículo correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
+
+
+
 
 # 3 MANUAL DE IMPLANTAÇÃO DO SISTEMA
