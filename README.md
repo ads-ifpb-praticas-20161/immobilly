@@ -1,6 +1,6 @@
 # SISTEMA IMMOBILLY
-# DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO
-# Versão 1.0
+## DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO DO SISTEMA
+## Versão 1.0
 
 
 ### Revisões deste documento e lançamentos
@@ -368,3 +368,122 @@ Passo      |                    Descrição
 3.         | O sistema exibi uma lista de manutenção de veículo correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
 
+## 2.7 Manter abastecimento do veículo
+Tal caso de uso possibilitará ao supervisor gerenciar os abastecimentos dos veículos da frota da empresa além de promover funcionalidade para inserir, alterar, consultar e excluir os devidos abastecimentos. 
+
+### Atores envolvidos
+Supervisor.
+
+### Pré-condições
+Para a realização deste caso de uso é necessário o usuário do tipo supervisor esteja devidamente cadastrado no sistema assim como o mesmo se autentique conforme caso de uso anterior. 
+
+### Pós-condições 
+Nenhuma. 
+
+### Fluxo principal
+Passo      |                    Descrição
+---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | Inicia-se o fluxo quando dado usuário do tipo supervisor se autentica no sistema e seleciona a opção de gerenciar abastecimentos dos veículos.
+2.         | O sistema apresenta um ambiente para o adequado gerenciamento dos abastecimentos dos veículos listado.
+
+
+### Fluxo alternativo – cadastrar novo abastecimento do veículo
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor clica na opção de cadastrar novo abastecimento de veículo
+2.         | O sistema apresentar uma tela de formulário para seleção do veículo a ser abastecido, inserção dos dados do posto onde realizou o abastecimento, a data e hora, quantidade de combustível, valor por litro, valor do abastecimento. 
+3.         | O sistema verifica se os dados são válidos. 
+4.         | O sistema cadastra a realização do novo abastecimento do veículo.
+5.         | O caso de uso é encerrado
+
+
+### Fluxo alternativo – editar abastecimento do veículo
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor clica em um abastecimento dos veículos da lista de abastecimentos devidamente registrados.
+2.         | O supervisor clica na opção editar abastecimentos dos veículos.
+3.         | O sistema exibi um ambiente de formulário para as devidas edições dos dados do abastecimento do veículo.
+4.         | O supervisor edita os dados desejados
+5.         | O supervisor clica na opção salvar
+6.         | O sistema altera as informações editadas na base de dados
+7.         | O caso de uso é encerrado.
+
+### Fluxo alternativo – excluir abastecimento do veículo
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor seleciona um abastecimento do veículo da lista dos já cadastrados.
+2.         | O supervisor clica na opção excluir abastecimento do veículo
+3.         | O sistema exibi uma mensagem de confirmação da exclusão 
+4.         | O usuário confirma a operação.
+5.         | O sistema remove o registro desejado da base de dados.
+6.         | O caso de uso é encerrado.
+
+### Fluxo alternativo – buscar abastecimento do veículo
+
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor seleciona a caixa de texto de pesquisa de abastecimento do veículo
+2.         | O supervisor digita o texto desejado para a realização da busca 
+3.         | O sistema exibi uma lista de abastecimento do veículo correspondentes ao texto digitado.
+4.         | O caso de uso é encerrado.
+
+## 2.8 Manter licenciamento dos veículos
+Tal caso de uso possibilitará ao supervisor gerenciar os licenciamento dos veículos da frota da empresa além de promover funcionalidade para inserir, alterar, consultar e excluir os devidos licenciamento dos veículos. 
+
+### Atores envolvidos
+Supervisor.
+
+### Pré-condições
+Para a realização deste caso de uso é necessário o usuário do tipo supervisor esteja devidamente cadastrado no sistema assim como o mesmo se autentique conforme caso de uso anterior. 
+
+### Pós-condições 
+Nenhuma. 
+
+### Fluxo principal
+Passo      |                    Descrição
+---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | Inicia-se o fluxo quando dado usuário do tipo supervisor se autentica no sistema e seleciona a opção de gerenciar licenciamento dos veículos.
+2.         | O sistema apresenta um ambiente para o adequado gerenciamento do licenciamento dos veículos listado.
+
+
+### Fluxo alternativo – cadastrar novo licenciamento de veículo
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor clica na opção de cadastrar novo licenciamento para veículo
+2.         | O sistema apresentar uma tela de formulário para seleção do veículo e a inserção dos dados do ano, data de referência do licenciamento e do valor pago.
+3.         | O sistema verifica se os dados são válidos. 
+4.         | O sistema cadastra a realização do novo licenciamento do veículo.
+5.         | O caso de uso é encerrado
+
+
+### Fluxo alternativo – editar licenciamento de veículo.
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor clica em um licenciamento de veículo da lista de licenciamentos devidamente registrados.
+2.         | O supervisor clica na opção editar licenciamento do veículo.
+3.         | O sistema exibi um ambiente de formulário para as devidas edições dos dados do licenciamento do veículo..
+4.         | O supervisor edita os dados desejados
+5.         | O supervisor clica na opção salvar
+6.         | O sistema altera as informações editadas na base de dados
+7.         | O caso de uso é encerrado.
+
+### Fluxo alternativo – excluir licenciamento de veículo.
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor seleciona um licenciamento de veículo da lista dos já cadastrados.
+2.         | O supervisor clica na opção excluir licenciamento do veículo.
+3.         | O sistema exibi uma mensagem de confirmação da exclusão 
+4.         | O usuário confirma a operação.
+5.         | O sistema remove o registro desejado da base de dados.
+6.         | O caso de uso é encerrado.
+
+### Fluxo alternativo – buscar licenciamento de veículo.
+
+Passo      |                    Descrição
+---------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+1.         | O supervisor seleciona a caixa de texto de pesquisa de licenciamento de veículo.
+2.         | O supervisor digita o texto desejado para a realização da busca do licenciamento.
+3.         | O sistema exibi uma lista de licenciamento do veículo correspondentes ao texto digitado.
+4.         | O caso de uso é encerrado.
+
+# 3 MANUAL DE IMPLANTAÇÃO DO SISTEMA
