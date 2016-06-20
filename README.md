@@ -21,22 +21,22 @@ Data          |   Versão    |               Descrição                  |  Aut
 ### ÍNDICE
 
 [1. CONSIDERAÇÕES INICIAIS](#user-content-coninicial)<br>
-[1.1 Descrição](#user-content-d)<br>
-[1.2 O sistema Immobilly](#user-content-ost)<br>
-[1.3 Objetivo](#user-content-o)<br>
+   [1.1 Descrição](#user-content-d)<br>
+   [1.2 O sistema Immobilly](#user-content-ost)<br>
+   [1.3 Objetivo](#user-content-o)<br>
 [2. REQUISITOS](#user-content-requisito)<br>
-[2.1 Autenticação no sistema](#user-content-as)<br>
-[2.2 Manter usuários](#user-content-mu)<br>
-[2.3 Manter veículos](#user-content-mv)<br>
-[2.4 Manter fornecedor](#user-content-mf)<br>
-[2.5 Manter locação de veículo](#user-content-mlv)<br>
-[2.6 Manter manutenção de veículo](#user-content-mmv)<br>
-[2.7 Manter abastecimento do veículo](#user-content-mav)<br>
-[2.8 Manter licenciamento dos veículos](#user-content-mldv)<br>
+   [2.1 Autenticação no sistema](#user-content-as)<br>
+   [2.2 Manter usuários](#user-content-mu)<br>
+   [2.3 Manter veículos](#user-content-mv)<br>
+   [2.4 Manter fornecedor](#user-content-mf)<br>
+   [2.5 Manter locação de veículo](#user-content-mlv)<br>
+   [2.6 Manter manutenção de veículo](#user-content-mmv)<br>
+   [2.7 Manter abastecimento do veículo](#user-content-mav)<br>
+   [2.8 Manter licenciamento dos veículos](#user-content-mldv)<br>
 [3. MANUAL DE IMPLANTAÇÃO DO SISTEMA](#user-content-mis)<br>
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
-Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Analise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
+Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Análise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
 
 ## 1.1 <a name="d">Descrição</a>
 A NetLineTelecom - não possui modelo ou ferramenta para o adequado gerenciamento dos veículos da sua frota. Não existe um adequado controle das revisões dos veículos, assim como a definição por meio de ferramentas confiáveis que descrevam quais dos funcionários, se encontro em posse de dado automóvel, como também não se tem controle das atividades corriqueiras a serem desenvolvidas, tomando como base suas características, se manutenção em instalações, se vistorias de rede, entre outras., e o uso das ferramentas adequadas para cada atividade, deste modo direcionar os veículos que melhor se adeque a está atividade.  Pensando assim os funcionários responsáveis por realizar a administração dos veículos disporão de um modulo no sistema em que serão capazes de descrever atividades características para cada automóvel (se disponíveis e/ou ocupados, realizar consultas e realizar a locação de veículo), além de um modulo administrativo para gerenciar processos necessários ao sistema como cadastro de funcionários, de motoristas, sendo os mesmo com suas adequadas permissões de acessos personalizadas conforme cada perfil ao qual pertence. Ainda como característica do sistema no mesmo será possível realizar a supervisão/acompanhamento dos recursos e dos veículos  permitidos o a liberação ou bloqueio dos mesmos para uso tendo em vista está em processo de revisão, manutenção, entre outras. 
@@ -505,6 +505,17 @@ Passo      |                    Descrição
 4.         | O caso de uso é encerrado.
 
 
-
-
 # <a name="mis">3 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
+* clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
+* extrai e abra o mesmo com uma [IDE](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado);
+* crie um banco de dado (ex.: immobilly), em um ambiente [postgresSQL](https://www.postgresql.org/);
+* execute o escript .sql para constração das tabelas;
+* no arquivo de .properties mude o usuário e a senha para respectivos valores correspondentes as especificações do seu banco de dados, assim como descreva a url seguido do nome do banco que você atribuiu na hora da construção supracitada.
+* limpe e construa a execução deste projeto fazendo uso de recurso da sua IDE;
+* copile o projeto; 
+* identifique o arquivo .war dentro do diretório target gerado pós copilado projeto;
+* copie o citado arquivo .war e cole na pasta webapps de dado Apache Software (recomenda-se o [tomcat 8.0](https://tomcat.apache.org/download-80.cgi)), **caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha**;
+* Inicialize o servidor (executando o start servisse) Apache citado;
+* abra um navegador browser a seu critério ([Google Chrome](https://support.google.com/chrome/answer/95346?hl=pt-BR) ou [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/download-ie)), procure sempre se precaver de usar as versões mais recentes;
+* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema).
+* se autentique com seu nome de usuário e senha e acesse as funcionalidades do sistema.
