@@ -508,9 +508,9 @@ Passo      |                    Descrição
 # <a name="mer">3 MODELO ENTIDADE-RELACIONAMENTO</a>
 Deste modo teremos as especificações dos requistios apresentados descrevendo de melhor modo os objetos (entidades) envolvidos no domínio de negócio, assim como suas características (atributos) assim como elas se relacionam entre si (relacionamentos) conforme modelo entidade-relacionamento que se segue.  
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg?][Modelo Entidade-Relacionamento]
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg][Modelo Entidade-Relacionamento]
 
-[Diagrama de caso de uso]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg?
+[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
 * clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
