@@ -5,19 +5,10 @@
  */
 package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Date;
-import javax.persistence.Entity;
-
 /**
  *
  * @author jederson
  */
-
-public class Licenciamento implements Serializable {
- 
-    private Date data;
-    private Date anoReferencia;
-    private BigDecimal valor;
+class Fornecedor {
+    
 }
