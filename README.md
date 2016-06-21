@@ -33,7 +33,8 @@ Data          |   Versão    |               Descrição                  |  Aut
    [2.6 Manter manutenção de veículo](#user-content-mmv)<br>
    [2.7 Manter abastecimento do veículo](#user-content-mav)<br>
    [2.8 Manter licenciamento dos veículos](#user-content-mldv)<br>
-[3. MANUAL DE IMPLANTAÇÃO DO SISTEMA](#user-content-mis)<br>
+[3. MODELO ENTIDADE-RELACIONAMENTO](#user-content-mer)<br>
+[4. MANUAL DE IMPLANTAÇÃO DO SISTEMA](#user-content-mis)<br>
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Análise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
@@ -504,18 +505,24 @@ Passo      |                    Descrição
 3.         | O sistema exibi uma lista de licenciamento do veículo correspondentes ao texto digitado.
 4.         | O caso de uso é encerrado.
 
+# <a name="mer">3 MODELO ENTIDADE-RELACIONAMENTO</a>
+Deste modo teremos as especificações dos requistios apresentados descrevendo de melhor modo os objetos (entidades) envolvidos no domínio de negócio, assim como suas características (atributos) assim como elas se relacionam entre si (relacionamentos) conforme modelo entidade-relacionamento que se segue.  
 
-# <a name="mis">3 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg][Modelo Entidade-Relacionamento]
+
+[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg
+
+# <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
 * clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
 * extrai e abra o mesmo com uma [IDE](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado);
 * crie um banco de dado (ex.: immobilly), em um ambiente [postgresSQL](https://www.postgresql.org/);
 * execute o escript .sql para constração das tabelas;
-* no arquivo de .properties mude o usuário e a senha para respectivos valores correspondentes as especificações do seu banco de dados, assim como descreva a url seguido do nome do banco que você atribuiu na hora da construção supracitada.
+* no arquivo de .properties mude o usuário e a senha para respectivos valores correspondentes as especificações do seu banco de dados, assim como descreva a url seguido do nome do banco que você atribuiu na hora da construção supracitada;
 * limpe e construa a execução deste projeto fazendo uso de recurso da sua IDE;
 * copile o projeto; 
 * identifique o arquivo .war dentro do diretório target gerado pós copilado projeto;
 * copie o citado arquivo .war e cole na pasta webapps de dado Apache Software (recomenda-se o [tomcat 8.0](https://tomcat.apache.org/download-80.cgi)), **caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha**;
 * Inicialize o servidor (executando o start servisse) Apache citado;
 * abra um navegador browser a seu critério ([Google Chrome](https://support.google.com/chrome/answer/95346?hl=pt-BR) ou [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/download-ie)), procure sempre se precaver de usar as versões mais recentes;
-* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema).
+* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema);
 * se autentique com seu nome de usuário e senha e acesse as funcionalidades do sistema.
