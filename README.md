@@ -33,9 +33,7 @@ O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negó
 ## 1.3 <a name="o">Objetivo</a>
 Este documento tem por objetivo principal apontar os requisitos do sistema de gerenciamento de veículos da empresa NetLineTelecom, fornecendo ao desenvolvimento do projeto as orientações necessárias para a adequada implementação do sistema.
 
-
-[2. REQUISITOS](https://github.com/ads-ifpb-praticas-20161/immobilly/wiki/2-REQUISITOS)<br>
-
+#<a href="https://github.com/ads-ifpb-praticas-20161/immobilly/wiki/2-REQUISITOS">2 REQUISITOS</a>
 
 # <a name="mer">3 MODELO ENTIDADE-RELACIONAMENTO</a>
 Deste modo teremos as especificações dos requistios apresentados descrevendo de melhor modo os objetos (entidades) envolvidos no domínio de negócio, assim como suas características (atributos) assim como elas se relacionam entre si (relacionamentos) conforme modelo entidade-relacionamento que se segue.  
