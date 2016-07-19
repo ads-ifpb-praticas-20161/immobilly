@@ -17,7 +17,7 @@ import javax.persistence.ManyToOne;
  * @author jederson
  */
 @Embeddable
-public class AbastecimentoId implements Serializable {
+public class ManutençãoId implements Serializable {
     
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     private Fornecedor fornecedor;
@@ -25,10 +25,10 @@ public class AbastecimentoId implements Serializable {
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     private Veiculo veiculo;
 
-    public AbastecimentoId() {
+    public ManutençãoId() {
     }
 
-    public AbastecimentoId(Fornecedor fornecedor, Veiculo veiculo) {
+    public ManutençãoId(Fornecedor fornecedor, Veiculo veiculo) {
         this.fornecedor = fornecedor;
         this.veiculo = veiculo;
     }
@@ -51,7 +51,9 @@ public class AbastecimentoId implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 3;
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.fornecedor);
+        hash = 17 * hash + Objects.hashCode(this.veiculo);
         return hash;
     }
 
@@ -66,7 +68,7 @@ public class AbastecimentoId implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final AbastecimentoId other = (AbastecimentoId) obj;
+        final ManutençãoId other = (ManutençãoId) obj;
         if (!Objects.equals(this.fornecedor, other.fornecedor)) {
             return false;
         }
@@ -77,4 +79,5 @@ public class AbastecimentoId implements Serializable {
     }
     
     
+
 }

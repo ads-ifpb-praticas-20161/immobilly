@@ -5,10 +5,16 @@
  */
 package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+
 /**
  *
  * @author jederson
  */
+@Entity
 public class Manutenção {
     
+    @EmbeddedId
+    private ManutençãoId manutençãoId;
 }
