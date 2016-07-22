@@ -6,6 +6,7 @@
 package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Embedded;
 import javax.persistence.EnumType;
@@ -133,6 +134,35 @@ class Fornecedor {
 
     public void setAbastecimento(Abastecimento abastecimento) {
         this.abastecimento = abastecimento;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 67 * hash + (int) (this.cod ^ (this.cod >>> 32));
+        hash = 67 * hash + Objects.hashCode(this.CNPJ);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Fornecedor other = (Fornecedor) obj;
+        if (this.cod != other.cod) {
+            return false;
+        }
+        if (!Objects.equals(this.CNPJ, other.CNPJ)) {
+            return false;
+        }
+        return true;
     }
     
     

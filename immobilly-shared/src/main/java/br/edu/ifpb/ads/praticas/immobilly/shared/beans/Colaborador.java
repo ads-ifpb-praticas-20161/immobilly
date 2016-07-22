@@ -39,17 +39,17 @@ public class Colaborador implements Serializable {
     private Endereço endereco;
     @Embedded
     private CNH cnh;
-    @OneToOne(mappedBy = "colaborador",cascade = CascadeType.ALL)
-    private Locacao locacao;
-    @OneToOne(mappedBy = "colaborador", cascade = CascadeType.ALL)
-    private Reserva reserva;
-    @OneToMany(mappedBy = "colaborador", cascade = CascadeType.ALL)
-    private Licenciamento licenciamento;
+//    @OneToOne(mappedBy = "colaborador",cascade = CascadeType.ALL)
+//    private Locacao locacao;
+//    @OneToOne(mappedBy = "colaborador", cascade = CascadeType.ALL)
+//    private Reserva reserva;
+//    @OneToMany(mappedBy = "colaborador", cascade = CascadeType.ALL)
+//    private Licenciamento licenciamento;
 
     public Colaborador() {
     }
 
-    public Colaborador(long cod, String nome, String email, String senha, String celular, Date dataNascimento, String sexo, String CPF, String cargo, Endereço endereco, CNH cnh, Locacao locacao, Reserva reserva, Licenciamento licenciamento) {
+    public Colaborador(long cod, String nome, String email, String senha, String celular, Date dataNascimento, String sexo, String CPF, String cargo, Endereço endereco, CNH cnh) {
         this.cod = cod;
         this.nome = nome;
         this.email = email;
@@ -61,11 +61,9 @@ public class Colaborador implements Serializable {
         this.cargo = cargo;
         this.endereco = endereco;
         this.cnh = cnh;
-        this.locacao = locacao;
-        this.reserva = reserva;
-        this.licenciamento = licenciamento;
     }
 
+    
     public long getCod() {
         return cod;
     }
@@ -154,30 +152,7 @@ public class Colaborador implements Serializable {
         this.cnh = cnh;
     }
 
-    public Locacao getLocacao() {
-        return locacao;
-    }
-
-    public void setLocacao(Locacao locacao) {
-        this.locacao = locacao;
-    }
-
-    public Reserva getReserva() {
-        return reserva;
-    }
-
-    public void setReserva(Reserva reserva) {
-        this.reserva = reserva;
-    }
-
-    public Licenciamento getLicenciamento() {
-        return licenciamento;
-    }
-
-    public void setLicenciamento(Licenciamento licenciamento) {
-        this.licenciamento = licenciamento;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 5;

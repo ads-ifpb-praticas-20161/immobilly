@@ -8,6 +8,7 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
 /**
@@ -15,8 +16,11 @@ import javax.persistence.Entity;
  * @author jederson
  */
 
+@Entity
 public class Licenciamento implements Serializable {
- 
+    
+    @EmbeddedId
+    private LicenciamentoId licenciamentoId = new LicenciamentoId();
     private Date data;
     private Date anoReferencia;
     private BigDecimal valor;

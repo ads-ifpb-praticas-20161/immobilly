@@ -112,6 +112,10 @@ public class Locacao implements Serializable{
         this.horarioRetorno = horarioRetorno;
     }
 
+    public void realizarLocacao(){
+        
+    }
+    
     @Override
     public int hashCode() {
         int hash = 7;
