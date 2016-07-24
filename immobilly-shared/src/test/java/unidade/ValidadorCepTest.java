@@ -5,10 +5,10 @@
  */
 package unidade;
 
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoCepException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoPlacaException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador.ValidadorCep;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador.ValidadorCepImpl;
+import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoCepException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorCep;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorCepImpl;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

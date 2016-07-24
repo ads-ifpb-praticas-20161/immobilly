@@ -5,9 +5,9 @@
  */
 package unidade;
 
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoEmailException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador.ValidadorEmail;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador.ValidadorEmailImpl;
+import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoEmailException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorEmail;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorEmailImpl;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

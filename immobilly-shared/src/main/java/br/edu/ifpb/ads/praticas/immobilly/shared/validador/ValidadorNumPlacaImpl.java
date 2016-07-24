@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador;
+package br.edu.ifpb.ads.praticas.immobilly.shared.validador;
 
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoEmailException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoPlacaException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidadorPlacaImpl implements ValidadorPlaca {
+public class ValidadorNumPlacaImpl implements ValidadorNumPlaca {
 
     @Override
     public Boolean ehValido(String placa) throws InvalidoPlacaException {

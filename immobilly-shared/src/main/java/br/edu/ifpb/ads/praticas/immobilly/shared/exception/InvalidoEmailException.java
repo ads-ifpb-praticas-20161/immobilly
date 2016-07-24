@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception;
+package br.edu.ifpb.ads.praticas.immobilly.shared.exception;
 
 /**
  *
  * @author Aluísio
  */
-public class InvalidoPlacaException extends Throwable {
+public class InvalidoEmailException extends Throwable {
 
-    public InvalidoPlacaException(String msg) {
+    public InvalidoEmailException(String msg) {
         super(msg);
     }
+
 }

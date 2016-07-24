@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifpb.ads.praticas.immobilly.shared.beans.validador;
+package br.edu.ifpb.ads.praticas.immobilly.shared.validador;
 
-import br.edu.ifpb.ads.praticas.immobilly.shared.beans.exception.InvalidoCepException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoCepException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
