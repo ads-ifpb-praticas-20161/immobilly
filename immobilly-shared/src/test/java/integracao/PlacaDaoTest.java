@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistema;
+package integracao;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa;
 import br.edu.ifpb.ads.praticas.immobilly.shared.dao.PlacaDao;
@@ -54,9 +54,12 @@ public class PlacaDaoTest extends BataBaseJPATest {
         Assert.assertNotNull(placa2);
         Assert.assertEquals("EEE-5678", placa2.getNumeracao());
     }
-
     /**
      * Test of atualizar method, of class PlacaDao.
+     *
+     * @throws java.lang.Exception
+     * @throws
+     * br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException
      */
     @Test
     public void testAtualizar() throws Exception, InvalidoPlacaException {
@@ -79,7 +82,6 @@ public class PlacaDaoTest extends BataBaseJPATest {
         Assert.assertNotEquals(placa1.getNumeracao(), placa2.getNumeracao());
         Assert.assertNotEquals(placa1.getCidade(), placa2.getCidade());
         Assert.assertNotEquals(placa1.getUf(), placa2.getUf());
-
     }
 
     /**
@@ -91,7 +93,6 @@ public class PlacaDaoTest extends BataBaseJPATest {
         Assert.assertNotNull(placa);
         Assert.assertEquals("EEE-5678", placa.getNumeracao());
     }
-
     /**
      * Test of buscarTodasPlacas method, of class PlacaDao.
      */
@@ -100,7 +101,6 @@ public class PlacaDaoTest extends BataBaseJPATest {
         List<Placa> placas = entityManager.createQuery("FROM Placa").getResultList();
         Assert.assertEquals(2, placas.size());
     }
-
     /**
      * Test of excluir method, of class PlacaDao.
      *
@@ -112,5 +112,4 @@ public class PlacaDaoTest extends BataBaseJPATest {
         entityManager.remove(placa);
         Assert.assertNull(placa);
     }
-
 }

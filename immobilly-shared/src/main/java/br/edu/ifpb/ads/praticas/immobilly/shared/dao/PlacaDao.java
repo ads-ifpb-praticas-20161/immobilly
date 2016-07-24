@@ -18,7 +18,9 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class PlacaDao implements PlacaDaoIf {
 
-    @PersistenceContext(unitName = "teste")
+    
+    
+    @PersistenceContext(unitName = "placa")
     EntityManager em;
 
     /**

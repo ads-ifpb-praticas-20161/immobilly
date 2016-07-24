@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistema;
+package integracao;
 
 import java.io.InputStream;
 import java.sql.SQLException;
@@ -22,6 +22,7 @@ import org.dbunit.ext.hsqldb.HsqldbDataTypeFactory;
 import org.dbunit.operation.DatabaseOperation;
 import org.hibernate.HibernateException;
 import org.hibernate.impl.SessionImpl;
+
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
