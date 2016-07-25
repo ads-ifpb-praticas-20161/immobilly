@@ -7,6 +7,7 @@ package unidade;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa;
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.Validador;
 import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -22,7 +23,7 @@ import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
  */
 public class PlacaTest {
 
-    private ValidadorPlaca validador;
+    private Validador<Placa> validador;
 
     @Before
     public void setUpTests() {
@@ -45,7 +46,7 @@ public class PlacaTest {
     public void testValidarPlaca() throws Exception, InvalidoPlacaException {
         System.out.println("validarPlaca");
         Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
-        assertEquals(validador.ehValido("EEE-1234"), validador.ehValido(placa.getNumeracao()));
+        assertEquals(true, validador.validar(placa));
     }
 
     /**

@@ -7,6 +7,7 @@ package unidade;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoCpfException;
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlaca;
 import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import org.junit.After;
 import org.junit.Assert;
@@ -21,11 +22,11 @@ import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
  */
 public class ValidadorNumPlacaTest {
 
-    private ValidadorPlaca validador;
+    private ValidadorNumPlaca validador;
 
     @Before
     public void setUpTests() {
-        validador = new ValidadorPlaca();
+        validador = new ValidadorNumPlaca();
     }
 
     @After

@@ -22,12 +22,12 @@ public class ValidadorPlaca implements Validador<Placa> {
         if(placa.getUf()== null){
             throw new ValidadorException("Placa Inválida: UF inexistente");
         }
+        if(placa.getUf().length()!=2){
+            throw new ValidadorException("Placa Inválida: UF Inválido");
+        }
         if(placa.getCidade()== null){
             throw new ValidadorException("Placa Inválida: Cidade inexistente");
-        }
-        if(placa.getNumeracao()==null){
-            throw new ValidadorException("Placa Inválida: Numeração inexisntente");
-        }
+        }        
         String pattern = "[a-zA-Z]{3,3}-\\d{4,4}";
         Pattern p = Pattern.compile(pattern);
         Matcher match = p.matcher(placa.getNumeracao());

@@ -31,18 +31,25 @@ public class Placa implements Serializable {
     private String numeracao;
     @Column(name = "cidade", nullable = false, length = 50)
     private String cidade;
-    @Column(name = "uf", nullable = false, length = 50)
+    @Column(name = "uf", nullable = false, length = 2)
     private String uf;
 
     public Placa() {
     }
 
+    public Placa(long id, String numeracao, String cidade, String uf) throws InvalidoPlacaException {
+        this.id = id;
+        this.numeracao = numeracao;
+        this.cidade = cidade;
+        this.uf = uf;
+        validarPlaca();
+    }
+    
     public Placa(String numeracao, String cidade, String uf) throws InvalidoPlacaException {
         this.uf = uf;
         this.cidade = cidade;        
-        if (validarPlaca()) {
-            this.numeracao = numeracao;
-        }
+        this.numeracao = numeracao;
+        validarPlaca();
         
     }
 
@@ -64,9 +71,8 @@ public class Placa implements Serializable {
     }
 
     public void setNumeracao(String numeracao) throws InvalidoPlacaException {
-        if (validarPlaca()) {
-            this.numeracao = numeracao;
-        }
+        this.numeracao = numeracao;
+        validarPlaca();
     }
 
     public String getCidade() {
