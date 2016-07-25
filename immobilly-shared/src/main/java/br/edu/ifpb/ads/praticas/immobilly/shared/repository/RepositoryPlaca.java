@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
  *
  * @author jederson
  */
-public class RepositoryPlaca implements Repositorio<Long, Placa>{
+public class RepositoryPlaca implements Repositorio<Placa>{
 
      private EntityManager em;
     
@@ -47,15 +47,7 @@ public class RepositoryPlaca implements Repositorio<Long, Placa>{
     }
 
     @Override
-    public boolean remover(Long id) {
-        em.getTransaction().begin();
-        em.remove(id);
-        em.getTransaction().commit();
-        return true;
-    }
-
-    @Override
-    public Placa localizar(Long id) {
+    public Placa localizar(long id) {
         return em.find(Placa.class, id);
     }
 

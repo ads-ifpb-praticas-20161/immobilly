@@ -17,11 +17,11 @@ import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
  */
 public class Loader {
     public static void main(String[] args) throws InvalidoPlacaException {
-//       Placa placa = new Placa("MNT-1034", "Cajazeiras", "PB");
-//        RepositoryPlaca repositoryPlaca = new RepositoryPlaca();
-//        ValidadorPlaca validadorPlaca = new ValidadorPlaca();
-//        ServicePlaca sp = new ServicePlaca(repositoryPlaca, validadorPlaca);
-//        
-//        sp.salvar(placa);
+       Placa placa = new Placa("MNT-1034", "Cajazeiras", "PB");
+        RepositoryPlaca repositoryPlaca = new RepositoryPlaca();
+        ValidadorPlaca validadorPlaca = new ValidadorPlaca();
+        ServicePlaca sp = new ServicePlaca(repositoryPlaca, validadorPlaca);
+        
+        sp.salvar(placa);
     }
 }

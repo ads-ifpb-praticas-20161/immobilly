@@ -13,15 +13,13 @@ import java.util.List;
  * @param <K>
  * @param <T>
  */
-public interface Repositorio<K extends Number, T> {
+public interface Repositorio<T> {
 
     public boolean salvar(T t);
 
-    public boolean remover(T t);
+    public boolean remover(T t);    
 
-    public boolean remover(K key);
-
-    public T localizar(K key);
+    public T localizar(long key);
 
     public List<T> todos();
 }

@@ -8,11 +8,8 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.repository;
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa;
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
 import br.edu.ifpb.ads.praticas.immobilly.shared.infraestrutura.db.DBUnitHelper;
-import java.util.List;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -49,7 +46,7 @@ public class RepositoryPlacaIT {
         Placa placa = new Placa(667, "EEE-1234", "Cajazeiras", "PB");
         repository.salvar(placa);
         
-        Placa q = repository.localizar(667l);
+        Placa q = repository.localizar(667);
         assertNotNull(q);
         assertFalse("EAE-1112".equals(q.getNumeracao()));
         assertTrue("EEE-1234".equals(q.getNumeracao()));
@@ -60,31 +57,15 @@ public class RepositoryPlacaIT {
      * Test of remover method, of class RepositoryPlaca.
      */
     @Test
-    public void testRemover_Placa() {
+    public void testRemover() {
         System.out.println("remover");
-        Placa p = repository.localizar(13l);
+        Placa p = repository.localizar(13);
         assertNotNull(p);
         assertTrue("DDD-1478".equals(p.getNumeracao()));
                     
         repository.remover(p);
         
-        assertNull(p=repository.localizar(13l));
-    }
-
-    /**
-     * Test of remover method, of class RepositoryPlaca.
-     */
-    @Test
-    public void testRemover_Integer() {
-       
-        System.out.println("remover");
-        Placa p = repository.localizar(13l);
-        assertNotNull(p);
-        assertTrue("DDD-1478".equals(p.getNumeracao()));
-                    
-        repository.remover(13l);
-        
-        assertNull(p=repository.localizar(13l));
+        assertNull(p=repository.localizar(13));
     }
 
     /**
@@ -93,7 +74,7 @@ public class RepositoryPlacaIT {
     @Test
     public void testLocalizar() {
         System.out.println("localizar");
-        Placa p = repository.localizar(13l);
+        Placa p = repository.localizar(13);
         assertNotNull(p);
         assertTrue("DDD-1478".equals(p.getNumeracao()));
     }
