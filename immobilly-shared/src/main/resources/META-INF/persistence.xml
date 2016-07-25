@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<<<<<<< HEAD
   <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+=======
+  <persistence-unit name="persistenceImmobilly" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+>>>>>>> 70aa45afdd0b8612eb1c8cadde7fc97a46e1288e
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Veiculo</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Abastecimento</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Colaborador</class>
