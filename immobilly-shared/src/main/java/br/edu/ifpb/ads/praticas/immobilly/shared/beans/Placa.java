@@ -6,7 +6,6 @@
 package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -39,11 +38,12 @@ public class Placa implements Serializable {
     }
 
     public Placa(String numeracao, String cidade, String uf) throws InvalidoPlacaException {
-        if (validarPlaca(numeracao)) {
+        this.uf = uf;
+        this.cidade = cidade;        
+        if (validarPlaca()) {
             this.numeracao = numeracao;
         }
-        this.cidade = cidade;
-        this.uf = uf;
+        
     }
 
     public long getId() {
@@ -54,9 +54,9 @@ public class Placa implements Serializable {
         this.id = id;
     }
 
-    public Boolean validarPlaca(String placa) throws InvalidoPlacaException {
+    public Boolean validarPlaca() throws InvalidoPlacaException {
         ValidadorPlaca verPlaca = new ValidadorPlaca();
-        return verPlaca.ehValido(placa);
+        return verPlaca.validar(this);
     }
 
     public String getNumeracao() {
@@ -64,7 +64,7 @@ public class Placa implements Serializable {
     }
 
     public void setNumeracao(String numeracao) throws InvalidoPlacaException {
-        if (validarPlaca(numeracao)) {
+        if (validarPlaca()) {
             this.numeracao = numeracao;
         }
     }
