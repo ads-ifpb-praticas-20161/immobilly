@@ -45,7 +45,7 @@ public class PlacaTest {
     @Test
     public void testValidarPlaca() throws Exception, InvalidoPlacaException {
         System.out.println("validarPlaca");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
         assertEquals(true, validador.validar(placa));
     }
 
@@ -55,7 +55,7 @@ public class PlacaTest {
     @Test
     public void testGetNumeracao() throws InvalidoPlacaException {
         System.out.println("validarNumeracao");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
         assertEquals("EEE-1234", placa.getNumeracao());
     }
 
@@ -65,7 +65,7 @@ public class PlacaTest {
     @Test
     public void testSetNumeracao() throws InvalidoPlacaException {
         System.out.println("setNumeracao");
-        Placa carro = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa carro = new Placa("EEE-1234", "Cajazeiras", "PB");
         carro.setNumeracao("EEE-5678");
         assertEquals("EEE-5678", carro.getNumeracao());
     }
@@ -76,7 +76,7 @@ public class PlacaTest {
     @Test
     public void testGetCidade() throws InvalidoPlacaException {
         System.out.println("getCidade");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
         assertEquals("Cajazeiras", placa.getCidade());
     }
 
@@ -86,7 +86,7 @@ public class PlacaTest {
     @Test
     public void testSetCidade() throws InvalidoPlacaException {
         System.out.println("setCidade");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
         placa.setCidade("Sousa");
         assertEquals("Sousa", placa.getCidade());
     }
@@ -97,8 +97,8 @@ public class PlacaTest {
     @Test
     public void testGetUf() throws InvalidoPlacaException {
         System.out.println("getUf");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
-        assertEquals("Paraíba", placa.getUf());
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
+        assertEquals("PB", placa.getUf());
     }
 
     /**
@@ -108,7 +108,7 @@ public class PlacaTest {
     public void testSetUf() throws InvalidoPlacaException {
         System.out.println("setUf");
         System.out.println("setCidade");
-        Placa placa = new Placa("EEE-1234", "Cajazeiras", "Paraíba");
+        Placa placa = new Placa("EEE-1234", "Cajazeiras", "PB");
         placa.setUf("Ceará");
         assertEquals("Ceará", placa.getUf());
     }
