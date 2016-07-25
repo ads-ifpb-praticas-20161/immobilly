@@ -1,2 +1,4 @@
 /immobilly-shared/target/
 /immobilly-shared/nbproject/
+/immobilly-shared/src/main/resources/META-INF/persistence.xml
+
