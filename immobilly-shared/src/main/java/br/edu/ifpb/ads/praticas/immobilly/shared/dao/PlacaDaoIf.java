@@ -20,7 +20,7 @@ public interface PlacaDaoIf {
 
     public Placa buscar(int id);
 
-    public List<Placa> buscarTodasPlacas();
+    public List<Placa> listarTodos();
     
     public void excluir (int id);
     

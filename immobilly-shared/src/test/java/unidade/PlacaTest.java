@@ -7,14 +7,14 @@ package unidade;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa;
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlaca;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlacaImpl;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 
 /**
  *
@@ -22,11 +22,11 @@ import static org.junit.Assert.*;
  */
 public class PlacaTest {
 
-    private ValidadorNumPlaca validador;
+    private ValidadorPlaca validador;
 
     @Before
     public void setUpTests() {
-        validador = new ValidadorNumPlacaImpl();
+        validador = new ValidadorPlaca();
     }
 
     @After

@@ -56,7 +56,7 @@ public class PlacaDao implements PlacaDaoIf {
      * @return
      */
     @Override
-    public List<Placa> buscarTodasPlacas() {
+    public List<Placa> listarTodos() {
         return em.createQuery("SELECT p FROM Placa p ORDER BY p.id", Placa.class).getResultList();
     }
 

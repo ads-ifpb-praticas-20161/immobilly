@@ -7,13 +7,13 @@ package unidade;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoCpfException;
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlacaImpl;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlaca;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 
 /**
  *
@@ -21,11 +21,11 @@ import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlaca;
  */
 public class ValidadorNumPlacaTest {
 
-    private ValidadorNumPlaca validador;
+    private ValidadorPlaca validador;
 
     @Before
     public void setUpTests() {
-        validador = new ValidadorNumPlacaImpl();
+        validador = new ValidadorPlaca();
     }
 
     @After

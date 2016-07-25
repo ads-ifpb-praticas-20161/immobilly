@@ -6,8 +6,7 @@
 package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlaca;
-import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorNumPlacaImpl;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Objects;
+import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 
 /**
  *
@@ -55,7 +55,7 @@ public class Placa implements Serializable {
     }
 
     public Boolean validarPlaca(String placa) throws InvalidoPlacaException {
-        ValidadorNumPlaca verPlaca = new ValidadorNumPlacaImpl();
+        ValidadorPlaca verPlaca = new ValidadorPlaca();
         return verPlaca.ehValido(placa);
     }
 
