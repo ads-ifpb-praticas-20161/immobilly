@@ -20,10 +20,10 @@ import javax.persistence.OneToOne;
 @Embeddable
 public class LicenciamentoId implements Serializable {
     
-    @OneToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    //@OneToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     private Colaborador supervisor;
     
-    @OneToOne
+    //@OneToOne
     private Veiculo veiculo;
 
     public LicenciamentoId() {
