@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-<<<<<<< HEAD
   <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
-    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-=======
-  <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
-    <provider>org.hibernate.ejb.HibernatePersistence</provider>
->>>>>>> ad789e700fb624b9fa397dfc32abe5ecd39d7075
-    <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Veiculo</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Abastecimento</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Colaborador</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Licenciamento</class>
@@ -15,11 +8,12 @@
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Manutenção</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa</class>
     <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Reserva</class>
+    <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Veiculo</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Immobilly"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="javax.persistence.jdbc.password" value="12345"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
