@@ -1,4 +1,6 @@
 # SISTEMA IMMOBILLY
+[![Build Status](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly.svg?branch=envTeste)](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly)
+
 ## DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO DO SISTEMA
 ## Versão 1.0
 
