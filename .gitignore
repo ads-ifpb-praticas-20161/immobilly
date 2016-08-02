@@ -3,3 +3,9 @@
 /immobilly-shared/src/main/resources/META-INF/persistence.xml
 /immobilly-core/target/
 /immobilly-web/target/
+.idea/
+immobilly-core/immobilly-core.iml
+immobilly-shared/immobilly-shared.iml
+immobilly-web/immobilly-web.iml
+project-immobilly.iml
+
