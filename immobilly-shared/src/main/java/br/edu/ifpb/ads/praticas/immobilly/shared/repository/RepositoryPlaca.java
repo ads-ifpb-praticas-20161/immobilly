@@ -17,7 +17,7 @@ import javax.persistence.Persistence;
  */
 public class RepositoryPlaca implements Repositorio<Placa>{
 
-     private EntityManager em;
+    private EntityManager em;
     
     public RepositoryPlaca() {
         this(Persistence.createEntityManagerFactory("persistence"));

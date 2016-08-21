@@ -44,7 +44,7 @@ public class RepositoryPlacaTest {
     @Test
     public void testSalvar() throws InvalidoPlacaException {
         System.out.println("salvar");
-        Placa placa = new Placa(667, "EEE-1234", "Cajazeiras", "PB");
+        Placa placa = new Placa(667,"EEE-1234", "Cajazeiras", "PB");
         repository.salvar(placa);
         
         Placa q = repository.localizar(667);

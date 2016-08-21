@@ -8,13 +8,7 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.beans;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
+import javax.persistence.*;
 
 /**
  *
@@ -35,7 +29,7 @@ public class Veiculo  implements Serializable{
     private String renavan;
     private String categoria;
     private String combustivel;
-    @Embedded
+
     private Placa placa;
     private Integer km;
     @Enumerated(EnumType.STRING)
