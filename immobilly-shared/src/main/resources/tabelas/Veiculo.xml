@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Veiculo
+            cod="73"
+            modelo="Corcel"
+            fabricante="Chevrolet"
+            cor="Preto"
+            anoFabricacao = "2010"
+            chassi="CSS23QWE34"
+            renavan="23456"
+            categoria = "A|B"
+            combustivel = "gasolina"
+            km = 213445
+    />
+</dataset>
