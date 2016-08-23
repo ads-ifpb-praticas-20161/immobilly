@@ -9,6 +9,9 @@
         <module>immobilly-shared</module>
         <module>immobilly-core</module>
         <module>immobilly-web</module>
+        <module>1immobilly-core</module>
+        <module>2immobilly-web</module>
+        <module>3immobilly-shared</module>
     </modules>
     <build>
         <plugins>
