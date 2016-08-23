@@ -21,7 +21,7 @@ import br.edu.ifpb.ads.praticas.immobilly.shared.validador.ValidadorPlaca;
 public class Placa implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Integer id;
     @Column(name = "numeracao", nullable = false, unique = true, length = 8)
     private String numeracao;

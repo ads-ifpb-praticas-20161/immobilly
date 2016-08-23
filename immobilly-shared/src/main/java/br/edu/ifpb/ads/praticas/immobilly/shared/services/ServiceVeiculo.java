@@ -2,13 +2,14 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.services;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Veiculo;
 import br.edu.ifpb.ads.praticas.immobilly.shared.repository.RepositoryVeiculo;
+import br.edu.ifpb.ads.praticas.immobilly.shared.services.Service;
 
 import java.util.List;
 
 /**
  * Created by jederson on 21/08/16.
  */
-public class ServiceVeiculo implements Service<Integer,Veiculo>{
+public class ServiceVeiculo implements Service<Integer,Veiculo> {
 
     private RepositoryVeiculo rv;
 

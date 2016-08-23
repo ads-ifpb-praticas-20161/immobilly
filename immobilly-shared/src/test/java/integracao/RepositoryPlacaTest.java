@@ -40,6 +40,7 @@ public class RepositoryPlacaTest {
 
     /**
      * Test of salvar method, of class RepositoryPlaca.
+     * @throws br.edu.ifpb.ads.praticas.immobilly.shared.exception.InvalidoPlacaException
      */
     @Test
     public void testSalvar() throws InvalidoPlacaException {

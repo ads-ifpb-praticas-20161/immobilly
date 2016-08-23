@@ -10,6 +10,6 @@
             renavan="23456"
             categoria = "A|B"
             combustivel = "gasolina"
-            km = 213445
+            km = "213445"
     />
 </dataset>

@@ -7,6 +7,7 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.services;
 
 import br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa;
 import br.edu.ifpb.ads.praticas.immobilly.shared.repository.RepositoryPlaca;
+import br.edu.ifpb.ads.praticas.immobilly.shared.services.Service;
 import br.edu.ifpb.ads.praticas.immobilly.shared.validador.Validador;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  *
  * @author jederson
  */
-public class ServicePlaca implements Service<Integer, Placa>{
+public class ServicePlaca implements Service<Integer, Placa> {
 
     RepositoryPlaca repositoryPlaca;
     Validador<Placa> validadorPlaca;
