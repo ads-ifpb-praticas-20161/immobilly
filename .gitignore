@@ -9,3 +9,6 @@ immobilly-shared/immobilly-shared.iml
 immobilly-web/immobilly-web.iml
 project-immobilly.iml
 
+/3immobilly-shared/target/
+/1immobilly-core/target/
+/2immobilly-web/target/

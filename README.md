@@ -1,4 +1,6 @@
 # SISTEMA IMMOBILLY
+[![Build Status](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly.svg?branch=bWeb)](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly)
+
 ## DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO DO SISTEMA
 ## Versão 1.0
 
@@ -44,11 +46,10 @@ Deste modo teremos as especificações dos requistios apresentados descrevendo d
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
 * clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
-* extrai e abra o mesmo com uma [IDE](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado);
 * crie um banco de dado (ex.: immobilly), em um ambiente [postgresSQL](https://www.postgresql.org/);
 * execute o escript .sql para constração das tabelas;
 * no arquivo de .properties mude o usuário e a senha para respectivos valores correspondentes as especificações do seu banco de dados, assim como descreva a url seguido do nome do banco que você atribuiu na hora da construção supracitada;
-* limpe e construa a execução deste projeto fazendo uso de recurso da sua IDE;
+* limpe e construa a execução deste projeto fazendo comando Maven apropriado (mvn clean install);
 * copile o projeto; 
 * identifique o arquivo .war dentro do diretório target gerado pós copilado projeto;
 * copie o citado arquivo .war e cole na pasta webapps de dado Apache Software (recomenda-se o [tomcat 8.0](https://tomcat.apache.org/download-80.cgi)), **caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha**;

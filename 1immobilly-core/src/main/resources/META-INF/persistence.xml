@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="jdbc/praticas-projeto-immobilly" transaction-type="JTA">
+        <jta-data-source>jdbc/praticas-projeto-immobilly</jta-data-source>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Abastecimento</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Colaborador</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Fornecedor</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Licenciamento</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Locacao</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Manutenção</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Placa</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Reserva</class>
+        <class>br.edu.ifpb.ads.praticas.immobilly.shared.beans.Veiculo</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="eclipselink.weaving" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
