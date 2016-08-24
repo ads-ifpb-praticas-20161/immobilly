@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditVeiculoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_km}" for="km" />
+                    <h:inputText id="km" value="#{veiculoController.selected.km}" title="#{bundle.EditVeiculoTitle_km}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_combustivel}" for="combustivel" />
+                    <h:inputText id="combustivel" value="#{veiculoController.selected.combustivel}" title="#{bundle.EditVeiculoTitle_combustivel}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_renavan}" for="renavan" />
+                    <h:inputText id="renavan" value="#{veiculoController.selected.renavan}" title="#{bundle.EditVeiculoTitle_renavan}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_cor}" for="cor" />
+                    <h:inputText id="cor" value="#{veiculoController.selected.cor}" title="#{bundle.EditVeiculoTitle_cor}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_categoria}" for="categoria" />
+                    <h:inputText id="categoria" value="#{veiculoController.selected.categoria}" title="#{bundle.EditVeiculoTitle_categoria}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_cod}" for="cod" />
+                    <h:inputText id="cod" value="#{veiculoController.selected.cod}" title="#{bundle.EditVeiculoTitle_cod}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_anoFabricacao}" for="anoFabricacao" />
+                    <h:inputText id="anoFabricacao" value="#{veiculoController.selected.anoFabricacao}" title="#{bundle.EditVeiculoTitle_anoFabricacao}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_chassi}" for="chassi" />
+                    <h:inputText id="chassi" value="#{veiculoController.selected.chassi}" title="#{bundle.EditVeiculoTitle_chassi}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_fabricante}" for="fabricante" />
+                    <h:inputText id="fabricante" value="#{veiculoController.selected.fabricante}" title="#{bundle.EditVeiculoTitle_fabricante}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_modelo}" for="modelo" />
+                    <h:inputText id="modelo" value="#{veiculoController.selected.modelo}" title="#{bundle.EditVeiculoTitle_modelo}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_status}" for="status" />
+                    <h:inputText id="status" value="#{veiculoController.selected.status}" title="#{bundle.EditVeiculoTitle_status}" />
+                    <h:outputLabel value="#{bundle.EditVeiculoLabel_placa}" for="placa" />
+                    <h:inputText id="placa" value="#{veiculoController.selected.placa}" title="#{bundle.EditVeiculoTitle_placa}" />
+                </h:panelGrid>
+                <h:commandLink action="#{veiculoController.update}" value="#{bundle.EditVeiculoSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditVeiculoViewLink}"/>
+                <br />
+                <h:commandLink action="#{veiculoController.prepareList}" value="#{bundle.EditVeiculoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditVeiculoIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -3,7 +3,7 @@ package br.edu.ifpb.ads.praticas.immobilly.shared.infraestrutura.db;
 /**
  * @since 17/11/2014
  * @version 1.0
- * @author Ricardo Job
+ * @author Jederson
  */
 public class InfrastructureException extends RuntimeException {
 

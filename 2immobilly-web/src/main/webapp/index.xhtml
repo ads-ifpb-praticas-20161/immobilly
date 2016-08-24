@@ -6,7 +6,8 @@
       >
     <h:head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-        <title>Dood - Login</title>
+        <title>Immobilly - Login</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
         <link rel="stylesheet" href="css/bootstrap.css"/>
         <link rel="stylesheet" href="css/bootstrap-theme.css"/>
         <link rel="stylesheet" href="css/estilo.css"/>
@@ -21,27 +22,51 @@
 
                 <h:form class="text-center">
                     <div class="form-group">
-                        <h:inputText class="form-control input-lg form-bordas_bottom" pt:placeholder="Digite seu Email" value="#{controladorApp.email}"/>
+                        <h:inputText class="form-control input-lg form-bordas_bottom" pt:placeholder="Digite seu Email" value=""/>
                     </div>
                     <br/><br/>
                     <div class="form-group">
-                        <h:inputSecret class="form-control input-lg form-bordas_bottom" pt:placeholder="Digite sua Senha" value="#{controladorApp.senha}"/>
+                        <h:inputSecret class="form-control input-lg form-bordas_bottom" pt:placeholder="Digite sua Senha" value=""/>
                     </div>
                     <br/><br/><br/>
-                    
+
                     <a href="solicitarAcesso.xhtml">
                         Solicite seu acesso agora!
                     </a>
                     <br/><br/>
                     <div class="form-group">
-                        <h:commandButton value="ENTRAR" class="btn btn-lg btn-danger btn-bordas-redondas btn-largo" action="#{controladorApp.logar()}"/>
+                        <h:commandButton value="ENTRAR" class="btn btn-lg btn-danger btn-bordas-redondas btn-largo" action=""/>
                     </div>
                 </h:form>
             </div>
         </div>
         <br />
         <h:link outcome="welcomePrimefaces" value="Página de boas-vindas do Primefaces" />
+        <br />
+        <h:link outcome="/abastecimento/List" value="Show All Abastecimento Items"/>
+        <br />
+        <h:link outcome="/colaborador/List" value="Show All Colaborador Items"/>
+        <br />
+        <h:link outcome="/fornecedor/List" value="Show All Fornecedor Items"/>
+        <br />
+        <h:link outcome="/locacao/List" value="Show All Locacao Items"/>
+        <br />
+        <h:link outcome="/reserva/List" value="Show All Reserva Items"/>
+        <br />
+        <h:link outcome="/veiculo/List" value="Show All Veiculo Items"/>
+        <br />
+        <h:link outcome="/licenciamento/List" value="Show All Licenciamento Items"/>
+        <br />
+        <h:link outcome="/manutenção/List" value="Show All Manutenção Items"/>
     </h:body>
+
+
+
+
+
+
+
+
     <script src="js/jquery-1.11.2.js" type="text/javascript"/>
     <script src="js/bootstrap.js" type="text/javascript"/>
 </html>

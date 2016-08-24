@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateLocacaoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_colaborador}" for="colaborador" />
+                    <h:selectOneMenu id="colaborador" value="#{locacaoController.selected.colaborador}" title="#{bundle.CreateLocacaoTitle_colaborador}" >
+                        <f:selectItems value="#{colaboradorController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_veiculo}" for="veiculo" />
+                    <h:selectOneMenu id="veiculo" value="#{locacaoController.selected.veiculo}" title="#{bundle.CreateLocacaoTitle_veiculo}" >
+                        <f:selectItems value="#{veiculoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_horarioSaida}" for="horarioSaida" />
+                    <h:inputText id="horarioSaida" value="#{locacaoController.selected.horarioSaida}" title="#{bundle.CreateLocacaoTitle_horarioSaida}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_horarioRetorno}" for="horarioRetorno" />
+                    <h:inputText id="horarioRetorno" value="#{locacaoController.selected.horarioRetorno}" title="#{bundle.CreateLocacaoTitle_horarioRetorno}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_kmRetorno}" for="kmRetorno" />
+                    <h:inputText id="kmRetorno" value="#{locacaoController.selected.kmRetorno}" title="#{bundle.CreateLocacaoTitle_kmRetorno}" />
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{locacaoController.selected.id}" title="#{bundle.CreateLocacaoTitle_id}" />
+                    <h:outputLabel value="#{bundle.CreateLocacaoLabel_kmSaida}" for="kmSaida" />
+                    <h:inputText id="kmSaida" value="#{locacaoController.selected.kmSaida}" title="#{bundle.CreateLocacaoTitle_kmSaida}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{locacaoController.create}" value="#{bundle.CreateLocacaoSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{locacaoController.prepareList}" value="#{bundle.CreateLocacaoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateLocacaoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
