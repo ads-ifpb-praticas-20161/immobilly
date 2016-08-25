@@ -4,7 +4,7 @@
     
     <groupId>br.edu.ifpb.ads.praticas</groupId>
     <artifactId>1immobilly-core</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>war</packaging>
 
     <name>1immobilly-core</name>
