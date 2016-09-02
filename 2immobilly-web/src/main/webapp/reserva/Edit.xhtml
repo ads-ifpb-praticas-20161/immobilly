@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditReservaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditReservaLabel_colaborador}" for="colaborador" />
+                    <h:selectOneMenu id="colaborador" value="#{reservaController.selected.colaborador}" title="#{bundle.EditReservaTitle_colaborador}" >
+                        <f:selectItems value="#{colaboradorController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditReservaLabel_veiculo}" for="veiculo" />
+                    <h:selectOneMenu id="veiculo" value="#{reservaController.selected.veiculo}" title="#{bundle.EditReservaTitle_veiculo}" >
+                        <f:selectItems value="#{veiculoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditReservaLabel_horarioSaida}" for="horarioSaida" />
+                    <h:inputText id="horarioSaida" value="#{reservaController.selected.horarioSaida}" title="#{bundle.EditReservaTitle_horarioSaida}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditReservaLabel_horarioRetorno}" for="horarioRetorno" />
+                    <h:inputText id="horarioRetorno" value="#{reservaController.selected.horarioRetorno}" title="#{bundle.EditReservaTitle_horarioRetorno}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditReservaLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{reservaController.selected.id}" title="#{bundle.EditReservaTitle_id}" />
+                    <h:outputLabel value="#{bundle.EditReservaLabel_status}" for="status" />
+                    <h:inputText id="status" value="#{reservaController.selected.status}" title="#{bundle.EditReservaTitle_status}" />
+                </h:panelGrid>
+                <h:commandLink action="#{reservaController.update}" value="#{bundle.EditReservaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditReservaViewLink}"/>
+                <br />
+                <h:commandLink action="#{reservaController.prepareList}" value="#{bundle.EditReservaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditReservaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

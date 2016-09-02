@@ -18,23 +18,22 @@ import static org.junit.Assert.*;
  * @author jederson
  */
 public class RepositoryPlacaIT {
-    
+
     private RepositoryPlaca repository;
-    
+
     public RepositoryPlacaIT() {
     }
-    
-       
+
     @Before
     public void setUp() {
-        new DBUnitHelper().cleanInsert("/tabelas/Placa.xml");   
+        new DBUnitHelper().cleanInsert("/tabelas/Placa.xml");
         repository = new RepositoryPlaca();
     }
-    
+
     @After
     public void tearDown() {
-        new DBUnitHelper().delete("/tabelas/Placa.xml");  
-        
+        new DBUnitHelper().delete("/tabelas/Placa.xml");
+
     }
 
     /**
@@ -45,12 +44,12 @@ public class RepositoryPlacaIT {
         System.out.println("salvar");
         Placa placa = new Placa(667, "EEE-1234", "Cajazeiras", "PB");
         repository.salvar(placa);
-        
+
         Placa q = repository.localizar(667);
         assertNotNull(q);
         assertFalse("EAE-1112".equals(q.getNumeracao()));
         assertTrue("EEE-1234".equals(q.getNumeracao()));
-        
+
     }
 
     /**
@@ -62,10 +61,10 @@ public class RepositoryPlacaIT {
         Placa p = repository.localizar(13);
         assertNotNull(p);
         assertTrue("DDD-1478".equals(p.getNumeracao()));
-                    
+
         repository.remover(p);
-        
-        assertNull(p=repository.localizar(13));
+
+        assertNull(p = repository.localizar(13));
     }
 
     /**
@@ -87,5 +86,5 @@ public class RepositoryPlacaIT {
         System.out.println("todos");
         assertNotNull(repository.todos().isEmpty());
     }
-    
+
 }

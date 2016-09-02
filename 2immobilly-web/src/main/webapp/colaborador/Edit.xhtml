@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditColaboradorTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_senha}" for="senha" />
+                    <h:inputText id="senha" value="#{colaboradorController.selected.senha}" title="#{bundle.EditColaboradorTitle_senha}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_endereco}" for="endereco" />
+                    <h:inputText id="endereco" value="#{colaboradorController.selected.endereco}" title="#{bundle.EditColaboradorTitle_endereco}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_cod}" for="cod" />
+                    <h:inputText id="cod" value="#{colaboradorController.selected.cod}" title="#{bundle.EditColaboradorTitle_cod}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_celular}" for="celular" />
+                    <h:inputText id="celular" value="#{colaboradorController.selected.celular}" title="#{bundle.EditColaboradorTitle_celular}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_nome}" for="nome" />
+                    <h:inputText id="nome" value="#{colaboradorController.selected.nome}" title="#{bundle.EditColaboradorTitle_nome}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_dataNascimento}" for="dataNascimento" />
+                    <h:inputText id="dataNascimento" value="#{colaboradorController.selected.dataNascimento}" title="#{bundle.EditColaboradorTitle_dataNascimento}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_sexo}" for="sexo" />
+                    <h:inputText id="sexo" value="#{colaboradorController.selected.sexo}" title="#{bundle.EditColaboradorTitle_sexo}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_cargo}" for="cargo" />
+                    <h:inputText id="cargo" value="#{colaboradorController.selected.cargo}" title="#{bundle.EditColaboradorTitle_cargo}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_cnh}" for="cnh" />
+                    <h:inputText id="cnh" value="#{colaboradorController.selected.cnh}" title="#{bundle.EditColaboradorTitle_cnh}" />
+                    <h:outputLabel value="#{bundle.EditColaboradorLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{colaboradorController.selected.email}" title="#{bundle.EditColaboradorTitle_email}" />
+                </h:panelGrid>
+                <h:commandLink action="#{colaboradorController.update}" value="#{bundle.EditColaboradorSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditColaboradorViewLink}"/>
+                <br />
+                <h:commandLink action="#{colaboradorController.prepareList}" value="#{bundle.EditColaboradorShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditColaboradorIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

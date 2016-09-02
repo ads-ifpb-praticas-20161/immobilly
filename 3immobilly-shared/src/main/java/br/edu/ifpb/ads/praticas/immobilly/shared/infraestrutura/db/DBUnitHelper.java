@@ -17,7 +17,7 @@ import org.dbunit.operation.TransactionOperation;
 /**
  * @since 17/11/2014
  * @version 1.0
- * @author Ricardo Job
+ * @author Jederson
  */
 public class DBUnitHelper {
 
