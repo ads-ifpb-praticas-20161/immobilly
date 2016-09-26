@@ -13,9 +13,7 @@ Serão descritos as versões seguindo Semantic Versioning.
 Versão      |       Alteração               |  Data
 ----------- | ----------------------------- | ------------
 1.0.0       | Primeria versão do documento  | 21/06/2016
------------ | ----------------------------- | ------------
 1.0.1       | segunda versão do documento   | 06/08/2016
------------ | ----------------------------- | ------------
 1.0.2       | terceira versão do documento  | 06/08/2016
 
 #### Histórico de revisão
@@ -44,9 +42,9 @@ Este documento tem por objetivo principal apontar os requisitos do sistema de ge
 # <a name="mer">3 MODELO ENTIDADE-RELACIONAMENTO</a>
 Deste modo teremos as especificações dos requistios apresentados descrevendo de melhor modo os objetos (entidades) envolvidos no domínio de negócio, assim como suas características (atributos) assim como elas se relacionam entre si (relacionamentos) conforme modelo entidade-relacionamento que se segue.  
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg][Modelo Entidade-Relacionamento]
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/bWeb/src/main/java/br/edu/ifpb/ads/praticas/immobilly/diagrama/MERaposCorrecao.jpa.png][Modelo Entidade-Relacionamento]
 
-[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg
+[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/bWeb/src/main/java/br/edu/ifpb/ads/praticas/immobilly/diagrama/MERaposCorrecao.jpa.png
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
 * clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git) com o comando (git clone https://github.com/ads-ifpb-praticas-20161/immobilly.git);
