@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly.svg?branch=bWeb)](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly)
 
 ## DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO DO SISTEMA
-## Versão 1.0
+## Versão 1.1
 
 
 ### Revisões deste documento e lançamentos
@@ -13,11 +13,15 @@ Serão descritos as versões seguindo Semantic Versioning.
 Versão      |       Alteração               |  Data
 ----------- | ----------------------------- | ------------
 1.0.0       | Primeria versão do documento  | 21/06/2016
+----------- | ----------------------------- | ------------
+1.0.1       | segunda versão do documento   | 06/08/2016
+----------- | ----------------------------- | ------------
+1.0.2       | terceira versão do documento  | 06/08/2016
 
 #### Histórico de revisão
 Data          |   Versão    |               Descrição                  |  Autor(es)
 ------------- | ----------- | ---------------------------------------- | --------------------------------
-21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) / [Jéderson](https://github.com/jedersongm) 
+27/09/2016    |  1.1.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) 
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Análise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
@@ -45,13 +49,8 @@ Deste modo teremos as especificações dos requistios apresentados descrevendo d
 [Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
-* clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
-* crie um banco de dado (ex.: Immobilly), em um ambiente [postgresSQL](https://www.postgresql.org/) ou outro de sua preferência;
-* configure o arquivo persistence.xml (src/main/resources) do módolo 3immobilly-shared; (com as configurações o banco que você especificou, nome do banco, usuário, senha, caminho do banco - url);
-* limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean install), estando dentro da pasta raiz de cada modolo;
-* identifique o arquivo .war dentro do diretório target gerado dentro do módolo 2immobilly-web do projeto;
-* copie o citado arquivo .war e cole na pasta webapps de dado Apache Software (recomenda-se o [tomcat 8.0](https://tomcat.apache.org/download-80.cgi)), **caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha**;
-* Inicialize o servidor (executando o start servisse) do Apache citado;
+* clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git) com o comando (git clone https://github.com/ads-ifpb-praticas-20161/immobilly.git);
+* limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean compile tomcat7:run), estando dentro da pasta raiz do projeto;
 * abra um navegador browser a seu critério ([Google Chrome](https://support.google.com/chrome/answer/95346?hl=pt-BR) ou [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/download-ie)), procure sempre se precaver de usar as versões mais recentes;
-* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema);
+* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8085) / o nome do sistema (projeto-immobilly) ficando assim: (http://localhost:8085/projeto-immobilly/);
 * se autentique com seu nome de usuário e senha e acesse as funcionalidades do sistema.

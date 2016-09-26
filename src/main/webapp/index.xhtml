@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template/default_layout.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="content">
+        <f:view locale="/visoes/abastecimento/New.jsp" encoding="UTF-8" contentType="text/html"></f:view>        
+
+        <div class="container-fluid">
+
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h1>New Abastecimento</h1>
+            <h:form>
+                <h:inputHidden id="validateCreateField" validator="#{abastecimento.validateCreate}" value="value"/>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Abastecimentoid:"/>
+                    <h:inputText id="abastecimentoid" value="#{abastecimento.abastecimento.abastecimentoid}" title="Abastecimentoid" required="true" requiredMessage="The abastecimentoid field is required." />
+
+                    <h:outputText value="Km:"/>
+                    <h:inputText id="km" value="#{abastecimento.abastecimento.km}" title="Km" />
+                    <h:outputText value="Quantidade:"/>
+                    <h:inputText id="quantidade" value="#{abastecimento.abastecimento.quantidade}" title="Quantidade" />
+                    <h:outputText value="Valorabastecimento:"/>
+                    <h:inputText id="valorabastecimento" value="#{abastecimento.abastecimento.valorabastecimento}" title="Valorabastecimento" />
+                    <h:outputText value="Valorporlitro:"/>
+                    <h:inputText id="valorporlitro" value="#{abastecimento.abastecimento.valorporlitro}" title="Valorporlitro" />
+
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{abastecimento.create}" value="Create"/>
+                <br />
+                <br />
+                <h:commandLink action="#{abastecimento.listSetup}" value="Show All Abastecimento Items" immediate="true"/>
+                <br />
+
+            </h:form>
+
+
+            <h:form>
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Novo cliente</legend>
+
+                    <!-- Text input-->                    
+
+                </fieldset>
+            </h:form>
+        </div>
+    </ui:define>
+    <ui:define name="footer">
+        JSF
+    </ui:define>
+</ui:composition>
