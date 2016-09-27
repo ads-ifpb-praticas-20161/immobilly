@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="br.edu.ifpb.praticas.jsf.beans" v="1.9" sm="false" xs="false" id="_1474746161143361" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="ColaboradorPK" abs="false" class="Colaborador" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161267362">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="nome" id="_1474746161267364">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;nome&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_1474746161267365">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;email&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="senha" id="_1474746161267366">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;senha&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="celular" id="_1474746161267367">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;celular&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="dataNascimento" id="_1474746161267368">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;dataNascimento&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="sexo" id="_1474746161267369">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;sexo&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cargo" id="_1474746161267370">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;cargo&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:embedded connected-class-id="_1474746161283380" visibile="true" name="cnh" id="_1474746161283379">
+                <jpa:bv/>
+            </jpa:embedded>
+            <jpa:embedded connected-class-id="_1474746161283372" visibile="true" name="endereco" id="_1474746161267371">
+                <jpa:bv/>
+            </jpa:embedded>
+            <jpa:id attribute-type="long" visibile="true" name="cod" id="_1474746161267363">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;cod&quot;)"/>
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="LocacaoPK" abs="false" class="Locacao" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161361384">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="Integer" visibile="true" name="kmRetorno" id="_1474746161361386">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;kmRetorno&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="kmSaida" id="_1474746161361387">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;kmSaida&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioSaida" id="_1474746161361388">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;horarioSaida&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioRetorno" id="_1474746161361389">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;horarioRetorno&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1474746161267362" visibile="true" name="colaborador" id="_1474746161361390">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1474746161611406" visibile="true" name="veiculo" id="_1474746161361391">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="long" visibile="true" name="id" id="_1474746161361385">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;id&quot;)"/>
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ReservaPK" abs="false" class="Reserva" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161455392">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioSaida" id="_1474746161455394">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;horarioSaida&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioRetorno" id="_1474746161455395">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;horarioRetorno&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" visibile="true" name="status" id="_1474746161455396">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;status&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1474746161611406" visibile="true" name="veiculo" id="_1474746161455398">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" optional="true" primaryKey="false" connected-entity-id="_1474746161267362" visibile="true" name="colaborador" id="_1474746161455397">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="long" visibile="true" name="id" id="_1474746161455393">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;id&quot;)"/>
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="FornecedorPK" abs="false" class="Fornecedor" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161533399">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="razaoSocial" id="_1474746161533401">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;razaoSocial&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="nomeFantasia" id="_1474746161533402">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;nomeFantasia&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_1474746161533403">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;email&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="telefone" id="_1474746161533404">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;telefone&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:embedded connected-class-id="_1474746161283372" visibile="true" name="endereco" id="_1474746161533405">
+                <jpa:bv/>
+            </jpa:embedded>
+            <jpa:id attribute-type="long" visibile="true" name="cod" id="_1474746161533400">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;cod&quot;)"/>
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="VeiculoPK" abs="false" class="Veiculo" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161611406">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="modelo" id="_1474746161611408">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;modelo&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="fabricante" id="_1474746161611409">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;fabricante&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cor" id="_1474746161611410">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;cor&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="anoFabricacao" id="_1474746161611411">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;anoFabricacao&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="chassi" id="_1474746161611412">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;chassi&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="renavan" id="_1474746161611413">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;renavan&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="categoria" id="_1474746161611414">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;categoria&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="combustivel" id="_1474746161611415">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;combustivel&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="km" id="_1474746161611416">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;km&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="javax.ws.rs.core.Response.Status" visibile="true" name="status" id="_1474746161611417">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;status&quot;)"/>
+                <jpa:bv/>
+                <jpa:enumerated>STRING</jpa:enumerated>
+            </jpa:basic>
+            <jpa:id attribute-type="long" visibile="true" name="cod" id="_1474746161611407">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;cod&quot;)"/>
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="AbastecimentoPK" abs="false" class="Abastecimento" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161705418">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horario" id="_1474746161705422">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;horario&quot;)"/>
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="km" id="_1474746161705423">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;km&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigDecimal" visibile="true" name="valorPorLitro" id="_1474746161705424">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;valorPorLitro&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigDecimal" visibile="true" name="valorAbastecimento" id="_1474746161705425">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;valorAbastecimento&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" visibile="true" name="quantidade" id="_1474746161705426">
+                <jpa:an e="true" n="@javax.ws.rs.FormParam(&quot;quantidade&quot;)"/>
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1474746161533399" visibile="true" name="fornecedor" id="_1474746161705420">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1474746161611406" visibile="true" name="veiculo" id="_1474746161705421">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="long" visibile="true" name="abastecimentoId" id="_1474746161705419">
+                <jpa:bv/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:embeddable abs="false" class="Endereco" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161283372">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="int" visibile="true" name="numero" id="_1474746161283373">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="rua" id="_1474746161283374">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="bairro" id="_1474746161283375">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cidade" id="_1474746161283376">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="uf" id="_1474746161283377">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cep" id="_1474746161283378">
+                <jpa:bv/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:embeddable>
+    <jpa:embeddable abs="false" class="CNH" visibile="true" minimized="false" rootElement="_1474746161143361" id="_1474746161283380">
+        <jpa:ts/>
+        <jpa:hc/>
+        <jpa:eq/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="renach" id="_1474746161283381">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="br.edu.ifpb.praticas.jsf.beans.CatType" visibile="true" name="categoria" id="_1474746161283382">
+                <jpa:bv/>
+                <jpa:enumerated>STRING</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="validade" id="_1474746161283383">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:embeddable>
+    <jpa:c/>
+    <jpa:diagram>
+        <plane elementRef="_1474746161143361">
+            <shape elementRef="_1474746161267362">
+                <Bounds x="494.0" y="194.0" width="166.0" height="273.0"/>
+            </shape>
+            <shape elementRef="_1474746161361384">
+                <Bounds x="267.0" y="99.0" width="145.0" height="210.0"/>
+            </shape>
+            <shape elementRef="_1474746161455392">
+                <Bounds x="269.0" y="353.0" width="143.0" height="189.0"/>
+            </shape>
+            <shape elementRef="_1474746161533399">
+                <Bounds x="499.0" y="590.0" width="161.0" height="189.0"/>
+            </shape>
+            <shape elementRef="_1474746161611406">
+                <Bounds x="46.0" y="353.0" width="138.0" height="281.0"/>
+            </shape>
+            <shape elementRef="_1474746161705418">
+                <Bounds x="249.0" y="590.0" width="182.0" height="231.0"/>
+            </shape>
+            <shape elementRef="_1474746161283372">
+                <Bounds x="709.0" y="471.0" width="154.0" height="163.0"/>
+            </shape>
+            <shape elementRef="_1474746161283380">
+                <Bounds x="709.0" y="279.0" width="128.0" height="100.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>

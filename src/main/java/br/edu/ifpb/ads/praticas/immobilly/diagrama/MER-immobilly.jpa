@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="br.edu.ifpb.ads.praticas.immobilly.entidadeDoBanco" v="1.9" sm="false" xs="false" id="_14748799920241" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="FornecedorPK" abs="false" class="Fornecedor" visibile="true" minimized="false" rootElement="_14748799920241" id="_14748799932912">
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_14748799934784">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="email" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="nomefantasia" id="_14748799934785">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="nomefantasia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="razaosocial" id="_14748799934786">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="razaosocial" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="telefone" id="_14748799934787">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="telefone" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="bairro" id="_14748799934788">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="bairro" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cep" id="_14748799934789">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cep" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cidade" id="_147487999347810">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cidade" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="numero" id="_147487999347811">
+                <jpa:bv/>
+                <jpa:column name="numero" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="rua" id="_147487999347812">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="rua" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="uf" id="_147487999347813">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="uf" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="cod" id="_14748799934313">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="cod" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Fornecedor.findAll">
+            <jpa:query>SELECT f FROM Fornecedor f</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByCod">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.cod = :cod</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByEmail">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.email = :email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByNomefantasia">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.nomefantasia = :nomefantasia</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByRazaosocial">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.razaosocial = :razaosocial</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByTelefone">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.telefone = :telefone</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByBairro">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.bairro = :bairro</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByCep">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.cep = :cep</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByCidade">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.cidade = :cidade</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByNumero">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.numero = :numero</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByRua">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.rua = :rua</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Fornecedor.findByUf">
+            <jpa:query>SELECT f FROM Fornecedor f WHERE f.uf = :uf</jpa:query>
+        </jpa:nq>
+        <jpa:table name="fornecedor"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="AbastecimentoPK" abs="false" class="Abastecimento" visibile="true" minimized="false" rootElement="_14748799920241" id="_147487999371215">
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horario" id="_147487999371217">
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="horario" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="km" id="_147487999371218">
+                <jpa:bv/>
+                <jpa:column name="km" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="quantidade" id="_147487999371219">
+                <jpa:bv/>
+                <jpa:column name="quantidade" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigInteger" visibile="true" name="valorabastecimento" id="_147487999371220">
+                <jpa:bv/>
+                <jpa:column name="valorabastecimento" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigInteger" visibile="true" name="valorporlitro" id="_147487999371221">
+                <jpa:bv/>
+                <jpa:column name="valorporlitro" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="abastecimentoid" id="_147487999371216">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="abastecimentoid" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Abastecimento.findAll">
+            <jpa:query>SELECT a FROM Abastecimento a</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByAbastecimentoid">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.abastecimentoid = :abastecimentoid</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByHorario">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.horario = :horario</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByKm">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.km = :km</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByQuantidade">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.quantidade = :quantidade</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByValorabastecimento">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.valorabastecimento = :valorabastecimento</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Abastecimento.findByValorporlitro">
+            <jpa:query>SELECT a FROM Abastecimento a WHERE a.valorporlitro = :valorporlitro</jpa:query>
+        </jpa:nq>
+        <jpa:table name="abastecimento"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="VeiculoPK" abs="false" class="Veiculo" visibile="true" minimized="false" rootElement="_14748799920241" id="_147487999385324">
+        <jpa:ts/>
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="anofabricacao" id="_147487999385326">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+                <jpa:column name="anofabricacao" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="categoria" id="_147487999385327">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="categoria" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="chassi" id="_147487999385328">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="chassi" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="combustivel" id="_147487999385329">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="combustivel" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cor" id="_147487999385330">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cor" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="fabricante" id="_147487999385331">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="fabricante" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="km" id="_147487999385332">
+                <jpa:bv/>
+                <jpa:column name="km" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="modelo" id="_147487999385333">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="modelo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="renavan" id="_147487999385334">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="renavan" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="status" id="_147487999385335">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="status" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="cod" id="_147487999385325">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="cod" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Veiculo.findAll">
+            <jpa:query>SELECT v FROM Veiculo v</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByCod">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.cod = :cod</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByAnofabricacao">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.anofabricacao = :anofabricacao</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByCategoria">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.categoria = :categoria</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByChassi">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.chassi = :chassi</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByCombustivel">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.combustivel = :combustivel</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByCor">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.cor = :cor</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByFabricante">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.fabricante = :fabricante</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByKm">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.km = :km</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByModelo">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.modelo = :modelo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByRenavan">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.renavan = :renavan</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Veiculo.findByStatus">
+            <jpa:query>SELECT v FROM Veiculo v WHERE v.status = :status</jpa:query>
+        </jpa:nq>
+        <jpa:table name="veiculo"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="LocacaoPK" abs="false" class="Locacao" visibile="true" minimized="false" rootElement="_14748799920241" id="_147487999397839">
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioretorno" id="_147487999397841">
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="horarioretorno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horariosaida" id="_147487999397842">
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="horariosaida" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="kmretorno" id="_147487999397843">
+                <jpa:bv/>
+                <jpa:column name="kmretorno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="kmsaida" id="_147487999397844">
+                <jpa:bv/>
+                <jpa:column name="kmsaida" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_147487999397840">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Locacao.findAll">
+            <jpa:query>SELECT l FROM Locacao l</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Locacao.findById">
+            <jpa:query>SELECT l FROM Locacao l WHERE l.id = :id</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Locacao.findByHorarioretorno">
+            <jpa:query>SELECT l FROM Locacao l WHERE l.horarioretorno = :horarioretorno</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Locacao.findByHorariosaida">
+            <jpa:query>SELECT l FROM Locacao l WHERE l.horariosaida = :horariosaida</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Locacao.findByKmretorno">
+            <jpa:query>SELECT l FROM Locacao l WHERE l.kmretorno = :kmretorno</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Locacao.findByKmsaida">
+            <jpa:query>SELECT l FROM Locacao l WHERE l.kmsaida = :kmsaida</jpa:query>
+        </jpa:nq>
+        <jpa:table name="locacao"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ReservaPK" abs="false" class="Reserva" visibile="true" minimized="false" rootElement="_14748799920241" id="_147487999408747">
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horarioretorno" id="_147487999408749">
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="horarioretorno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="horariosaida" id="_147487999408750">
+                <jpa:bv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="horariosaida" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="status" id="_147487999408751">
+                <jpa:bv/>
+                <jpa:column name="status" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_147487999408748">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Reserva.findAll">
+            <jpa:query>SELECT r FROM Reserva r</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Reserva.findById">
+            <jpa:query>SELECT r FROM Reserva r WHERE r.id = :id</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Reserva.findByHorarioretorno">
+            <jpa:query>SELECT r FROM Reserva r WHERE r.horarioretorno = :horarioretorno</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Reserva.findByHorariosaida">
+            <jpa:query>SELECT r FROM Reserva r WHERE r.horariosaida = :horariosaida</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Reserva.findByStatus">
+            <jpa:query>SELECT r FROM Reserva r WHERE r.status = :status</jpa:query>
+        </jpa:nq>
+        <jpa:table name="reserva"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ColaboradorPK" abs="false" class="Colaborador" visibile="true" minimized="false" rootElement="_14748799920241" id="_147487999424454">
+        <jpa:annotation e="true" n="@javax.xml.bind.annotation.XmlRootElement"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="cargo" id="_147487999424456">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cargo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="celular" id="_147487999424457">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="celular" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="datanascimento" id="_147487999424458">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+                <jpa:column name="datanascimento" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_147487999424459">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="email" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="nome" id="_147487999424460">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="nome" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="senha" id="_147487999424461">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="senha" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="sexo" id="_147487999424462">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="sexo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="categoria" id="_147487999424463">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="categoria" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="renach" id="_147487999424464">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="renach" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="validade" id="_147487999424465">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+                <jpa:column name="validade" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="bairro" id="_147487999424466">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="bairro" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cep" id="_147487999424467">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cep" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cidade" id="_147487999424468">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="cidade" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="numero" id="_147487999424469">
+                <jpa:bv/>
+                <jpa:column name="numero" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="rua" id="_147487999424470">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="rua" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="uf" id="_147487999424471">
+                <jpa:bv>
+                    <jpa:si ma="2147483647"/>
+                </jpa:bv>
+                <jpa:column name="uf" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="cod" id="_147487999424455">
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column name="cod" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Colaborador.findAll">
+            <jpa:query>SELECT c FROM Colaborador c</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCod">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.cod = :cod</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCargo">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.cargo = :cargo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCelular">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.celular = :celular</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByDatanascimento">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.datanascimento = :datanascimento</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByEmail">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.email = :email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByNome">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.nome = :nome</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findBySenha">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.senha = :senha</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findBySexo">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.sexo = :sexo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCategoria">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.categoria = :categoria</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByRenach">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.renach = :renach</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByValidade">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.validade = :validade</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByBairro">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.bairro = :bairro</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCep">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.cep = :cep</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByCidade">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.cidade = :cidade</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByNumero">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.numero = :numero</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByRua">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.rua = :rua</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Colaborador.findByUf">
+            <jpa:query>SELECT c FROM Colaborador c WHERE c.uf = :uf</jpa:query>
+        </jpa:nq>
+        <jpa:table name="colaborador"/>
+    </jpa:entity>
+    <jpa:diagram>
+        <plane elementRef="_14748799920241">
+            <shape elementRef="_14748799932912">
+                <Bounds x="32.0" y="32.0" width="161.0" height="281.0"/>
+            </shape>
+            <shape elementRef="_147487999371215">
+                <Bounds x="321.0" y="32.0" width="182.0" height="176.0"/>
+            </shape>
+            <shape elementRef="_147487999385324">
+                <Bounds x="1248.0" y="74.0" width="138.0" height="281.0"/>
+            </shape>
+            <shape elementRef="_147487999397839">
+                <Bounds x="1462.0" y="32.0" width="145.0" height="155.0"/>
+            </shape>
+            <shape elementRef="_147487999408747">
+                <Bounds x="631.0" y="32.0" width="143.0" height="134.0"/>
+            </shape>
+            <shape elementRef="_147487999424454">
+                <Bounds x="902.0" y="32.0" width="166.0" height="407.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
