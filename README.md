@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly.svg?branch=bWeb)](https://travis-ci.org/ads-ifpb-praticas-20161/immobilly)
 
 ## DOCUMENTO DE REQUISITOS e MANUAL DE IMPLANTAÇÃO DO SISTEMA
-## Versão 1.0
+## Versão 1.1
 
 
 ### Revisões deste documento e lançamentos
@@ -13,11 +13,13 @@ Serão descritos as versões seguindo Semantic Versioning.
 Versão      |       Alteração               |  Data
 ----------- | ----------------------------- | ------------
 1.0.0       | Primeria versão do documento  | 21/06/2016
+1.0.1       | segunda versão do documento   | 06/08/2016
+1.0.2       | terceira versão do documento  | 06/08/2016
 
 #### Histórico de revisão
 Data          |   Versão    |               Descrição                  |  Autor(es)
 ------------- | ----------- | ---------------------------------------- | --------------------------------
-21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) / [Jéderson](https://github.com/jedersongm) 
+27/09/2016    |  1.1.0      |          3 versão do projeto             | [Aluísio](https://github.com/AluisioPereira) 
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Análise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
@@ -29,9 +31,6 @@ A NetLineTelecom - não possui modelo ou ferramenta para o adequado gerenciament
 O sistema será independente necessitando de certa forma apenas de acesso à internet e por meio de browser se autenticar e ter conhecimento conforme a permissão para uso das ferramentas adequadas a resolução de suas atividades.
 O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negócios a sua interface gráfica, em outras palavras, por meio do uso de sua estrutura de negócio será capaz de elabora uma nova interface gráfica sem a devida necessidade de altera o código do modelo de negócio. Deste modo para isso o sistema seguirá o padrão MVC, dividindo-o em três camadas: apresentação/visão, modelo e controle.
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png][MVC]
- 
-[MVC]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png
 ## 1.3 <a name="o">Objetivo</a>
 Este documento tem por objetivo principal apontar os requisitos do sistema de gerenciamento de veículos da empresa NetLineTelecom, fornecendo ao desenvolvimento do projeto as orientações necessárias para a adequada implementação do sistema.
 
@@ -40,18 +39,18 @@ Este documento tem por objetivo principal apontar os requisitos do sistema de ge
 # <a name="mer">3 MODELO ENTIDADE-RELACIONAMENTO</a>
 Deste modo teremos as especificações dos requistios apresentados descrevendo de melhor modo os objetos (entidades) envolvidos no domínio de negócio, assim como suas características (atributos) assim como elas se relacionam entre si (relacionamentos) conforme modelo entidade-relacionamento que se segue.  
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg][Modelo Entidade-Relacionamento]
+![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/bWeb/src/main/java/br/edu/ifpb/ads/praticas/immobilly/diagrama/MERaposCorrecao.jpa.png][Modelo Entidade-Relacionamento]
 
-[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/MER.jpg
+[Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/bWeb/src/main/java/br/edu/ifpb/ads/praticas/immobilly/diagrama/MERaposCorrecao.jpa.png
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
-* clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git);
-* crie um banco de dado (ex.: Immobilly), em um ambiente [postgresSQL](https://www.postgresql.org/) ou outro de sua preferência;
-* configure o arquivo persistence.xml (src/main/resources) do módolo 3immobilly-shared; (com as configurações o banco que você especificou, nome do banco, usuário, senha, caminho do banco - url);
+* crie um banco de dado (ex.: immobilly), em um ambiente postgresSQL ou outro de sua preferência;
+* execute o script sql no referedio banco criado (arquivo banco.sql) que se encontra em src/main/setup;
+* configure o arquivo glassfish-resources.xml (projeto-immobilly\src\main\setups) (com as configurações do banco que você especificou, nome do banco, usuário, senha, caminho do banco - url);
 * limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean install), estando dentro da pasta raiz de cada modolo;
-* identifique o arquivo .war dentro do diretório target gerado dentro do módolo 2immobilly-web do projeto;
-* copie o citado arquivo .war e cole na pasta webapps de dado Apache Software (recomenda-se o [tomcat 8.0](https://tomcat.apache.org/download-80.cgi)), **caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha**;
-* Inicialize o servidor (executando o start servisse) do Apache citado;
-* abra um navegador browser a seu critério ([Google Chrome](https://support.google.com/chrome/answer/95346?hl=pt-BR) ou [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/download-ie)), procure sempre se precaver de usar as versões mais recentes;
+* identifique o arquivo projeto-immobilly-1.0.2.war dentro do diretório target gerado dentro do módolo do projeto;
+* copie o citado arquivo .war e cole na pasta webapps de dado servidor web (recomenda-se o GlassFish Server 4.1.1), caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha;
+* Inicialize o servidor (executando o start servisse);
+* abra um navegador browser a seu critério (Google Chrome ou Mozilla Firefox, Internet Explorer), procure sempre se precaver de usar as versões mais recentes;
 * acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema);
 * se autentique com seu nome de usuário e senha e acesse as funcionalidades do sistema.

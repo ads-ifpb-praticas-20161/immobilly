@@ -15,7 +15,7 @@ Versão      |       Alteração               |  Data
 #### Histórico de revisão
 Data          |   Versão    |               Descrição                  |  Autor(es)
 ------------- | ----------- | ---------------------------------------- | --------------------------------
-21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) / [Jéderson](https://github.com/jedersongm) 
+21/06/2016    |  1.0.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira)
 
 
 ### ÍNDICE
