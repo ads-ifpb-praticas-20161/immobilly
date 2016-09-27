@@ -31,9 +31,6 @@ A NetLineTelecom - não possui modelo ou ferramenta para o adequado gerenciament
 O sistema será independente necessitando de certa forma apenas de acesso à internet e por meio de browser se autenticar e ter conhecimento conforme a permissão para uso das ferramentas adequadas a resolução de suas atividades.
 O sistema possuirá uma arquitetura adequada, capaz de isolar as regras de negócios a sua interface gráfica, em outras palavras, por meio do uso de sua estrutura de negócio será capaz de elabora uma nova interface gráfica sem a devida necessidade de altera o código do modelo de negócio. Deste modo para isso o sistema seguirá o padrão MVC, dividindo-o em três camadas: apresentação/visão, modelo e controle.
 
-![https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png][MVC]
- 
-[MVC]: https://github.com/ads-ifpb-praticas-20161/immobilly/blob/master/img/mvc.png
 ## 1.3 <a name="o">Objetivo</a>
 Este documento tem por objetivo principal apontar os requisitos do sistema de gerenciamento de veículos da empresa NetLineTelecom, fornecendo ao desenvolvimento do projeto as orientações necessárias para a adequada implementação do sistema.
 
@@ -48,6 +45,7 @@ Deste modo teremos as especificações dos requistios apresentados descrevendo d
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
 * crie um banco de dado (ex.: immobilly), em um ambiente postgresSQL ou outro de sua preferência;
+* execute o script sql no referedio banco criado (arquivo banco.sql) que se encontra em src/main/setup;
 * configure o arquivo glassfish-resources.xml (projeto-immobilly\src\main\setups) (com as configurações do banco que você especificou, nome do banco, usuário, senha, caminho do banco - url);
 * limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean install), estando dentro da pasta raiz de cada modolo;
 * identifique o arquivo projeto-immobilly-1.0.2.war dentro do diretório target gerado dentro do módolo do projeto;
