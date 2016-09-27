@@ -1,0 +1,150 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:p="http://primefaces.org/ui">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet"/>
+    <ui:define name="content">
+        <div class="container">
+            <div class="col-md-9">
+                <div class="well well-sm">
+                    <h:form enctype="multipart/form-data"> 
+                        <fieldset>
+                            <legend class="text-justify header">CADASTRO DE VEÍCULO</legend>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-justify"><i class="fa fa-user bigicon"></i></span>
+
+                                <div class="col-md-8"> 
+                                    <h:outputText value="Fabricante"> </h:outputText>
+                                    <h:inputText value="#{controllerVeiculo.veiculo.fabricante}" pt:placeholder="Fabricante" class="form-control"/>
+                                </div>
+                            </div>
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-justify"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <h:outputText value="Descrição"> </h:outputText>
+                                    <h:inputText value="#{controllerVeiculo.veiculo.nome}" pt:placeholder="Nome do Veículo" class="form-control"/>
+                                </div>
+                            </div>
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-justify"><i class="fa fa-user bigicon"></i></span>
+
+                                <div class="col-md-8">
+                                    <h:outputText value="placa"> </h:outputText>
+                                    <h:inputText value="#{controllerVeiculo.veiculo.placa}" pt:placeholder="Placa do veículo" class="form-control"/>
+                                </div>
+                            </div>
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-justify"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-4">
+                                    <h:outputText value="valor atual do veículo">valor </h:outputText>
+                                    <h:inputText value="#{controllerVeiculo.aluguel.valor}" pt:placeholder="Valor do veículo" class="form-control"/>
+                                </div>
+                                <div class="col-md-4">   
+                                    <h:outputText value="tipo ">porte </h:outputText>
+                                    <h:selectOneMenu class="form-control" value="#{controllerVeiculo.tipoVeiculo}">
+                                        <f:selectItem itemValue="0" itemLabel="MÉDIO" />
+                                        <f:selectItem itemValue="1" itemLabel="SEMI-LEVE" />
+                                        <f:selectItem itemValue="2" itemLabel="LEVE" />
+                                    </h:selectOneMenu>	                                       
+                                </div>                                    
+                            </div>                                
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-justify"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <h:outputText value="Obs.: ">Obs.: </h:outputText>
+                                    <h:inputTextarea class="form-control" value="#{controllerVeiculo.veiculo.descricao}" pt:placeholder="Observações sobre veículo"/>                                        
+                                </div>
+                                <br/><br/>
+                            </div>    
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">   
+                                    <h:outputText value="imagem "> </h:outputText>
+                                    <p:fileUpload label="Procurar" value="#{controllerVeiculo.fileVeiculo}" allowTypes="/(\.|\/)(gif|jpg|jpeg|gif|png|PNG|GIF|JPG|JPEG)$/" 
+                                                  mode="simple" required="true" styleClass="btn btn-default"/>
+                                </div>
+                            </div>    
+
+                            <br/><br/>
+
+                            <div class="form-group">
+                                <div class="col-md-12 text-justify">
+                                    <h:commandButton class="btn btn-success btn-lg" action="#{controllerVeiculo.addVeiculo()}" value="Cadastrar"/>                                        
+                                </div>
+                            </div>
+                        </fieldset>                        
+                    </h:form>
+                </div>
+                <hr/>
+
+                <div class="collapse navbar-collapse  col-md-12" id="bs-example-navbar-collapse-1">
+
+                    <c:if test="#{controllerServidor.cliente.id != 0}">
+                        <legend class="text-justify header">VEÍCULOS JÁ CADASTRADOS</legend>
+                        <h:dataTable value="#{controllerVeiculo.listaVeiculos}" var="veiculo" styleClass="table table-striped" cellspacing="3" cellpadding="3">
+                            <h:column>
+                                <f:facet name="header">Nome</f:facet>
+                                    #{veiculo.nome}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Fabricante</f:facet>
+                                    #{veiculo.fabricante}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">placa</f:facet>
+                                    #{veiculo.placa}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <!--                    <h:outputText value="Excluir"/>-->
+                                </f:facet>
+                                <h:form>
+                                    <h:commandButton action="#" styleClass="btn btn-warning btn-xs" value="Editar"/>
+                                </h:form>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <!--                    <h:outputText value="Excluir"/>-->
+                                </f:facet>
+                                <h:form>
+                                    <h:commandButton action="#" styleClass="btn btn-danger btn-xs" value="Excluir"/>
+                                </h:form>
+                            </h:column>
+
+                        </h:dataTable>
+
+                    </c:if>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </ui:define>
+</ui:composition>

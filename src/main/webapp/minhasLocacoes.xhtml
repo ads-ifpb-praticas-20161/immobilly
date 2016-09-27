@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="content">
+
+        <h:form>
+            <fieldset>
+                <div class="container">
+
+                    <div class="col-md-9">                                       
+                        <div class="row">
+                            <c:forEach items="#{controllerVeiculo.listaVeiculos}" var="veiculo">   
+                                <c:if test="#{veiculo.aluguel.saida != 0}">
+                                    <c:if test="#{veiculo.aluguel.cliente.id == controllerServidor.cliente.id}">
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">                                
+                                                <img src="img/veiculos/#{veiculo.foto}" alt="#{veiculo.nome}" style="width: 320px; height: 150px"/>
+                                                <div class="caption">
+                                                    <h4 class="pull-right">$#{veiculo.aluguel.valor}0</h4>
+                                                    <h:form><h4><h:commandLink action="#{controllerVeiculo.pesquisarVeiculoMinhaLocacao(veiculo.id)}" value="#{veiculo.fabricante} #{veiculo.nome}"/></h4></h:form>                                        
+                                                    <p>#{veiculo.descricao}</p>
+                                                </div>
+                                                <div class="ratings">
+                                                    <p class="pull-right">1 locação</p>
+                                                    <p>
+                                                        <span class="glyphicon glyphicon-align-justify"></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </c:if>
+                                </c:if>
+                            </c:forEach>                                                    
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+                <div class="container">               
+                </div>
+            </fieldset>
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>

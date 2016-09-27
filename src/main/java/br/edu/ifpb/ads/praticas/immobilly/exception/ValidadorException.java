@@ -1,9 +1,7 @@
 package br.edu.ifpb.ads.praticas.immobilly.exception;
 
 /**
- * @author Ricardo Job
- * @mail ricardo.job@ifpb.edu.br
- * @since 03/03/2016, 15:31:50
+ * @author aluisio
  */
 public class ValidadorException extends RuntimeException {
 

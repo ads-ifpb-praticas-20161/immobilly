@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="content">  
+        <h:form>
+            <fieldset>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="col-md-10">
+                                <div class="list-group-item-success col-md-2">
+                                    <h:commandLink action="#{controllerVeiculo.carregarListaDeVeiculos()}" value="TODOS"/>
+                                </div>
+                                <div class="list-group-item-danger col-md-3">
+                                    <h:commandLink action="#{controllerVeiculo.carregarListaDeVeiculosEconomicos()}" value="MÉDIO PORTE"/>
+                                </div>
+                                <div class="list-group-item-info col-md-2">
+                                    <h:commandLink action="#{controllerVeiculo.carregarListaDeVeiculosLuxo()}" value="SEMI-LEVE"/>
+                                </div>
+                                <div class="list-group-item-warning col-md-2">
+                                    <h:commandLink action="#{controllerVeiculo.carregarListaDeVeiculosSuv()}" value="LEVE"/>
+                                </div>
+
+                            </div>
+                            <h:form>
+                                <hr></hr>
+                                <c:forEach items="#{controllerVeiculo.listaVeiculos}" var="veiculo"> 
+                                    <div class="col-sm-4 col-lg-4 col-md-4">
+                                        <div class="thumbnail">                                
+                                            <img src="img/veiculos/#{veiculo.foto}" alt="#{veiculo.nome}" style="width: 320px; height: 150px"/>
+                                            <div class="caption">
+                                                <h4 class="pull-right">placa: #{veiculo.placa}0</h4>
+                                                <h:form><h4><h:commandLink action="#{controllerVeiculo.pesquisarVeiculo(veiculo.id)}" value="#{veiculo.fabricante} #{veiculo.nome}"/></h4></h:form>                                        
+                                                <p>Descrição: #{veiculo.descricao}</p>
+                                            </div>
+                                            <div class="ratings">
+                                                <p class="pull-right">20 locações</p>
+                                                <p>
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </h:form>
+                        </div>                        
+
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+                <div class="container">               
+                </div>
+            </fieldset>
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>

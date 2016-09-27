@@ -19,7 +19,7 @@ Versão      |       Alteração               |  Data
 #### Histórico de revisão
 Data          |   Versão    |               Descrição                  |  Autor(es)
 ------------- | ----------- | ---------------------------------------- | --------------------------------
-27/09/2016    |  1.1.0      | Especificação dos requisitos funcionais  | [Aluísio](https://github.com/AluisioPereira) 
+27/09/2016    |  1.1.0      |          3 versão do projeto             | [Aluísio](https://github.com/AluisioPereira) 
 
 # 1 <a name="coninicial">CONSIDERAÇÕES INICIAIS</a>
 Em vista a cumprir a primeira etapa da elaboração do projeto para a disciplina de Práticas de Programação, do curso de Análise e Desenvolvimento de Sistema (ADS), IFPB - Cajazeiras, temos a construção desta documentação como forma de descrevermos os requisitos dos sistemas, assim como características para implantação do sistema de controle de frota de veículos da NetLineTelecom.
@@ -47,8 +47,12 @@ Deste modo teremos as especificações dos requistios apresentados descrevendo d
 [Modelo Entidade-Relacionamento]:https://github.com/ads-ifpb-praticas-20161/immobilly/blob/bWeb/src/main/java/br/edu/ifpb/ads/praticas/immobilly/diagrama/MERaposCorrecao.jpa.png
 
 # <a name="mis">4 MANUAL DE IMPLANTAÇÃO DO SISTEMA</a>
-* clone esse [repositório](https://github.com/ads-ifpb-praticas-20161/immobilly.git) com o comando (git clone https://github.com/ads-ifpb-praticas-20161/immobilly.git);
-* limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean compile tomcat7:run), estando dentro da pasta raiz do projeto;
-* abra um navegador browser a seu critério ([Google Chrome](https://support.google.com/chrome/answer/95346?hl=pt-BR) ou [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/download-ie)), procure sempre se precaver de usar as versões mais recentes;
-* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8085) / o nome do sistema (projeto-immobilly) ficando assim: (http://localhost:8085/projeto-immobilly/);
+* crie um banco de dado (ex.: immobilly), em um ambiente postgresSQL ou outro de sua preferência;
+* configure o arquivo glassfish-resources.xml (projeto-immobilly\src\main\setups) (com as configurações do banco que você especificou, nome do banco, usuário, senha, caminho do banco - url);
+* limpe e construa a execução deste projeto com o comando Maven apropriado (mvn clean install), estando dentro da pasta raiz de cada modolo;
+* identifique o arquivo projeto-immobilly-1.0.2.war dentro do diretório target gerado dentro do módolo do projeto;
+* copie o citado arquivo .war e cole na pasta webapps de dado servidor web (recomenda-se o GlassFish Server 4.1.1), caso não use o recomendado procure identificar a pasta de destino no apache de sua escolha;
+* Inicialize o servidor (executando o start servisse);
+* abra um navegador browser a seu critério (Google Chrome ou Mozilla Firefox, Internet Explorer), procure sempre se precaver de usar as versões mais recentes;
+* acesse através do http:// seu endereço local (ex.: localhost) : a porta de acesso (ex.: 8080) / o nome do sistema possível de identificar como o mesmo nome do arquivo .war (http://localhost:8080/nomeDoSistema);
 * se autentique com seu nome de usuário e senha e acesse as funcionalidades do sistema.

@@ -7,7 +7,7 @@ package br.edu.ifpb.ads.praticas.immobilly.exception;
 
 /**
  *
- * @author Aluísio
+ * @author aluisio
  */
 public class InvalidoCepException extends Throwable {
 
